@@ -1,4 +1,4 @@
-from app import db
+from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class User(db.Model):
@@ -13,7 +13,7 @@ class User(db.Model):
     
     beneficios = db.relationship('beneficios', back_populates='user')
     
-    requerimientos = db.relationship('requerimientos', back_populates='user')
+    requerimientos_status = db.relationship('requerimientos_status', back_populates='user')
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)

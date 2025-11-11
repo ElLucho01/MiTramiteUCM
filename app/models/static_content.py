@@ -1,5 +1,5 @@
 # /app/models/static_content.py
-from app import db
+from . import db
 from datetime import datetime
 
 class StaticContent(db.Model):
@@ -9,7 +9,7 @@ class StaticContent(db.Model):
     id = db.Column(db.String(50), primary_key=True) 
     
     # El contenido HTML o Markdown que el admin edita
-    content = db.Column(db.Text, nullable=False)
+    contenido = db.Column(db.Text, nullable=False)
     last_updated = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     def __repr__(self):
