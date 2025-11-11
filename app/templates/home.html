@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="main-content">
+        <button class="guide-btn">Guía de recomendaciones básicas</button>
+
+        <div class="benefits">
+            <div class="benefit-item">
+                <span class="benefit-title">Beneficios 1</span>
+                <button class="detail-btn">
+                    Ver detalle <span class="arrow">➜</span>
+                </button>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-title">Beneficios 2</span>
+                <button class="detail-btn">
+                    Ver detalle <span class="arrow">➜</span>
+                </button>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-title">Beneficios 3</span>
+                <button class="detail-btn">
+                    Ver detalle <span class="arrow">➜</span>
+                </button>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-title">Beneficios</span>
+                <button class="detail-btn">
+                    Ver detalle <span class="arrow">➜</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

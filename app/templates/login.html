@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Mi Tramite UCM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box registro">
+                <h2>Registrarse</h2>
+                <form>
+                    <input type="text" placeholder="Nombre y apellido" required>
+                    <input type="email" placeholder="Correo" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-box login">
+                <h2>Iniciar sesión</h2>
+                <form>
+                    <input type="email" placeholder="Correo" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Botón central */
+.guide-btn {
+    background-color: #e5eff3;
+    border: 1px solid #c0d0d6;
+    padding: 15px 40px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.guide-btn:hover {
+    background-color: #d6e5ea;
+}
+
+/* Lista de beneficios */
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    width: 60%;
+}
+
+.benefit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 25px;
+    border: 1px solid #c7c7c7;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.benefit-title {
+    font-size: 17px;
+    color: #333;
+}
+
+.detail-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: #184a90;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.detail-btn .arrow {
+    border: 2px solid #184a90;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.detail-btn:hover .arrow {
+    transform: translateX(3px);
+}

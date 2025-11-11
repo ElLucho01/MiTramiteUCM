@@ -2,7 +2,7 @@ version: "3.9"
 services:
   web:
     build: .
-    container_name: mitramite_flask
+    container_name: mitramite_flask_2
     ports:
       - "5000:5000"
     volumes:
@@ -14,12 +14,12 @@ services:
 
   db:
     image: postgres:15
-    container_name: mitramite_db
+    container_name: mitramite_db_2
     restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: mitramiteucm
+      POSTGRES_DB: mitramiteucm_2
     ports:
       - "5432:5432"
     volumes:
