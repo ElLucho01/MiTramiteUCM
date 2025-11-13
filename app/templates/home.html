@@ -13,33 +13,17 @@
         <button class="guide-btn">Guía de recomendaciones básicas</button>
 
         <div class="benefits">
-            <div class="benefit-item">
-                <span class="benefit-title">Beneficios 1</span>
-                <button class="detail-btn">
-                    Ver detalle <span class="arrow">➜</span>
-                </button>
-            </div>
-
-            <div class="benefit-item">
-                <span class="benefit-title">Beneficios 2</span>
-                <button class="detail-btn">
-                    Ver detalle <span class="arrow">➜</span>
-                </button>
-            </div>
-
-            <div class="benefit-item">
-                <span class="benefit-title">Beneficios 3</span>
-                <button class="detail-btn">
-                    Ver detalle <span class="arrow">➜</span>
-                </button>
-            </div>
-
-            <div class="benefit-item">
-                <span class="benefit-title">Beneficios</span>
-                <button class="detail-btn">
-                    Ver detalle <span class="arrow">➜</span>
-                </button>
-            </div>
+            {% for beneficio in beneficios %}
+                <div class="benefit-item">
+                    <span class="benefit-title">{{ beneficio.nombre }}</span>
+                        <button class="detail-btn"
+                                onclick="window.location.href='{{ url_for('home.beneficio_detail', beneficio_id=beneficio.id) }}'">
+                            Ver detalle <span class="arrow">➜</span>
+                        </button>
+                </div>
+            {% else %}
+                <p>No hay beneficios disponibles actualmente.</p>
+            {% endfor %}
         </div>
     </div>
 </body>

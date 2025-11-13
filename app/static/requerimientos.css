@@ -1,0 +1,91 @@
+.checklist-container {
+    width: 80%;
+    margin: auto;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.beneficio-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.beneficio-header h2 {
+    background: #e9eef4;
+    padding: 10px 40px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.config-icon {
+    background: #d9e8f7;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tramites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tramite-item {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+}
+
+.tramite-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tramite-nombre {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.toggle-info-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #2a72d4;
+    font-weight: 600;
+}
+
+.toggle-info-btn .icon {
+    margin-left: 5px;
+}
+
+.tramite-info {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #eef2f6;
+    border-radius: 6px;
+}
+
+.volver-wrapper {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.volver-btn {
+    padding: 8px 18px;
+    background: white;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+    color: #c95c32;
+    font-weight: bold;
+    text-decoration: none;
+}

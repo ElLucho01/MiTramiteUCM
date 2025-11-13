@@ -1,0 +1,73 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.benefit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.benefit-title {
+    background-color: #e9ecef;
+    border: 1px solid #d0d4d8;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 60%;
+    max-width: 500px;
+}
+
+.benefit-description {
+    background-color: #f2f5f7;
+    border: 1px solid #cfd3d6;
+    border-radius: 6px;
+    padding: 16px;
+    width: 70%;
+    max-width: 600px;
+    min-height: 150px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 400px;
+    margin-top: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.btn.volver {
+    color: #d9534f;
+    border-color: #d9534f;
+}
+
+.btn.volver:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn.conseguir {
+    color: #0275d8;
+    border-color: #0275d8;
+}
+
+.btn.conseguir:hover {
+    background-color: #0275d8;
+    color: white;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Beneficio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='beneficio.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="benefit-container">
+        <h2 class="benefit-title">{{ beneficio.nombre }}</h2>
+
+        <div class="benefit-description">
+            <p>{{ beneficio.descripcion }}</p>
+        </div>
+
+        <div class="button-row">
+            <a href="{{ url_for('home.home') }}" class="btn volver">← Volver</a>
+            <a href=# class="btn conseguir">¿Cómo lo consigo? →</a>
+        </div>
+    </div>
+</body>
+</html>

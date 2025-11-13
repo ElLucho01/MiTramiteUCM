@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
     <div class="container">
         <div class="form-container">
             <div class="form-box registro">
                 <h2>Registrarse</h2>
-                <form action="{{ url_for('routes.registrar') }}" method="POST">
+                <form action="{{ url_for('auth.registrar') }}" method="POST">
                     <label for="nombreReg">Nombre Completo</label>
                     <input type="text" id="nombreReg" name="nombreReg" placeholder="Nombre y apellido" required>
                     
@@ -29,7 +39,7 @@
 
             <div class="form-box login">
                 <h2>Iniciar sesión</h2>
-                <form action="{{ url_for('routes.login') }}" method="POST">
+                <form action="{{ url_for('auth.login') }}" method="POST">
                     <label for="correoLog">Correo</label>
                     <input type="email" name="correoLog" id="correoLog" placeholder="Correo" required>
 

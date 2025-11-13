@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from models import db  # Importa la instancia de SQLAlchemy desde models/__init__.py
-from routes import routes_bp
+from models.user import User
 import os
 
 def create_app():
@@ -18,7 +18,8 @@ def create_app():
     db.init_app(app)
 
     # Registrar blueprints (rutas)
-    app.register_blueprint(routes_bp)
+    from routes import register_routes
+    register_routes(app)
 
     # Crear tablas dentro del contexto de la app
     with app.app_context():
@@ -27,7 +28,6 @@ def create_app():
         print("✅ Tablas verificadas / creadas.")
 
     return app
-
 
 if __name__ == '__main__':
     app = create_app()

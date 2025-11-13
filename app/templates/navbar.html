@@ -1,14 +1,43 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+
 <div class="navbar">
-    <div class="logo">Mitramite</div>
+    <a class="logo" href="{{ url_for('home.home') }}">MiTrámite</a>
 
     <div class="search-container">
-        <input type="text" placeholder="Buscar">
+        <input type="text" placeholder="Buscar...">
     </div>
 
     <div class="icons">
-        <span class="icon">👤</span>
-        <span class="icon">🔔</span>
-        <span class="icon">📋</span>
+        <button class="icon-btn perfil-icon" title="Perfil">👤</button>
+        <button class="icon-btn" title="Notificaciones">🔔</button>
+        <button class="icon-btn" title="Trámites">📋</button>
     </div>
 </div>
+
+<!-- Menú desplegable del perfil -->
+<div id="perfil-menu" class="perfil-menu">
+    <div class="perfil-header">
+        Bienvenido, <strong>{{ session.get('nombre', 'Usuario') }}</strong>
+    </div>
+    <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+</div>
+
+<!--Event listeners -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const perfilIcon = document.querySelector('.perfil-icon');
+    const menu = document.getElementById('perfil-menu');
+
+    perfilIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!perfilIcon.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('show');
+        }
+    });
+});
+</script>
