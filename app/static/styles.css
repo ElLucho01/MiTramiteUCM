@@ -72,3 +72,40 @@ button:hover {
     border-radius: 2px;
     height: 300px;
 }
+
+/* === Labels === */
+label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+/* === Inputs con labels encima === */
+.form-box form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background-color: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.form-box form input:focus {
+    border-color: #7ef0fa;
+    box-shadow: 0 0 5px rgba(126, 240, 250, 0.6);
+    outline: none;
+    background-color: #fff;
+}
+
+/* === Mejor alineación general === */
+.form-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}

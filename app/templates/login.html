@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    {% include 'navbar.html' %}
     <div class="container">
         <div class="form-container">
             <div class="form-box registro">
                 <h2>Registrarse</h2>
-                <form>
-                    <input type="text" placeholder="Nombre y apellido" required>
-                    <input type="email" placeholder="Correo" required>
-                    <input type="password" placeholder="Contraseña" required>
+                <form action="{{ url_for('routes.registrar') }}" method="POST">
+                    <label for="nombreReg">Nombre Completo</label>
+                    <input type="text" id="nombreReg" name="nombreReg" placeholder="Nombre y apellido" required>
+                    
+                    <label for="correoReg">Correo</label>
+                    <input type="email" name="correoReg" id="correoReg" placeholder="Correo" required>
+
+                    <label for="contrasenaReg">Contraseña</label>
+                    <input type="password" name="contrasenaReg" id="contrasenaReg" placeholder="Contraseña" required>
                     <button type="submit">Registrarse</button>
                 </form>
             </div>
@@ -25,9 +29,12 @@
 
             <div class="form-box login">
                 <h2>Iniciar sesión</h2>
-                <form>
-                    <input type="email" placeholder="Correo" required>
-                    <input type="password" placeholder="Contraseña" required>
+                <form action="{{ url_for('routes.login') }}" method="POST">
+                    <label for="correoLog">Correo</label>
+                    <input type="email" name="correoLog" id="correoLog" placeholder="Correo" required>
+
+                    <label for="contrasenaLog">Contraseña</label>
+                    <input type="password" id="contrasenaLog" name="contrasenaLog" placeholder="Contraseña" required>
                     <button type="submit">Iniciar sesión</button>
                 </form>
             </div>

@@ -9,11 +9,15 @@ class User(db.Model):
     correo = db.Column(db.String(120), unique=True, nullable=False)
     password_hash = db.Column(db.String(256), nullable=False)
         
-    notificaciones = db.relationship('notificaciones', back_populates='user', lazy='dynamic')
+    notificaciones_rel = db.relationship(
+        'UserNotificaciones',
+        back_populates='user',
+        cascade='all, delete-orphan'
+    )    
+
+    beneficios_estado = db.relationship('Beneficios_Estado', back_populates='user', cascade='all, delete-orphan')
     
-    beneficios = db.relationship('beneficios', back_populates='user')
-    
-    requerimientos_status = db.relationship('requerimientos_status', back_populates='user')
+    requerimientos_estado = db.relationship('Requerimientos_Estado', back_populates='user')
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
