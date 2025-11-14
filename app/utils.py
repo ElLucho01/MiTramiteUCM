@@ -6,6 +6,6 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if 'user_id' not in session:
-            return redirect(url_for('routes.index'))  # Página de login
+            return redirect(url_for('auth.index'))  # Página de login
         return f(*args, **kwargs)
     return decorated_function

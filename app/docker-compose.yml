@@ -10,6 +10,9 @@ services:
       - .:/app
     depends_on:
       - db
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/mitramiteucm_2
 
