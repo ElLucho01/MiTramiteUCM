@@ -85,3 +85,130 @@
 .perfil-menu.show {
     display: flex;
 }
+
+.search-container {
+    position: relative;
+}
+
+.resultadosBusqueda {
+    position: absolute;
+    top: 100%; /* justo debajo del input */
+    left: 0;
+    width: 100%; /* igual al ancho del input */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+    z-index: 2000;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity .15s ease, transform .15s ease;
+}
+
+.resultadosBusqueda.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.resultado-item {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.resultado-item:hover {
+    background: #f7f7f7;
+}
+
+.resultado-item small {
+    color: #666;
+    font-size: 12px;
+}
+
+.resultado-sin {
+    padding: 12px;
+    color: #777;
+}
+
+.resultado-item.seleccionado {
+    background: #e6f0ff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Imagen del logo */
+.logo-img {
+    height: 48px;   /* Ajusta según tu logo */
+    width: auto;    /* Mantiene proporción */
+    display: block;
+}
+
+/* --- MENÚ DE SEGUIMIENTO --- */
+.seguimiento-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 260px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    z-index: 9999;
+}
+
+.seguimiento-menu.show {
+    display: flex;
+}
+
+.seguimiento-header {
+    padding: 10px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.seguimiento-item {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.seguimiento-item:hover {
+    background: #f0f0f0;
+}
+
+.seguimiento-item.sin {
+    color: #777;
+    background: #fafafa;
+}
+
+/* --- Badge del icono de seguimiento --- */
+.tracking-btn {
+    position: relative;
+}
+
+.tracking-btn .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #d9534f;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 999px;
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}

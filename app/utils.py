@@ -1,5 +1,8 @@
 from functools import wraps
-from flask import session, redirect, url_for
+from flask import session, redirect, url_for, g, Blueprint
+from models.tracking import Beneficios_Estado
+
+tracking_loader = Blueprint('tracking_loader', __name__)
 
 #Aseguramos que la sesión esté iniciada
 def login_required(f):
@@ -9,3 +12,4 @@ def login_required(f):
             return redirect(url_for('auth.index'))  # Página de login
         return f(*args, **kwargs)
     return decorated_function
+

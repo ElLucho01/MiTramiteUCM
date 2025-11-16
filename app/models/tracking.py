@@ -4,9 +4,9 @@ from datetime import datetime
 class Beneficios_Estado(db.Model):
     __tablename__ = 'beneficios_estado'
     
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
-    benefit_id = db.Column(db.Integer, db.ForeignKey('beneficios.id'), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    benefit_id = db.Column(db.Integer, db.ForeignKey('beneficios.id'), nullable=False)
     
     # Almacenamos el progreso y la fecha (del "Carrito") aquí
     fecha = db.Column(db.DateTime, default=datetime.utcnow)
@@ -21,9 +21,9 @@ class Beneficios_Estado(db.Model):
 class Requerimientos_Estado(db.Model):
     __tablename__ = 'requerimientos_estado'
     
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
-    requirement_id = db.Column(db.Integer, db.ForeignKey('requerimientos.id'), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    requirement_id = db.Column(db.Integer, db.ForeignKey('requerimientos.id'), nullable=False)
     
     cumplido = db.Column(db.Boolean, default=False, nullable=False) # 
 

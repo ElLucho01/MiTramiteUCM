@@ -2,10 +2,12 @@ from flask import Blueprint, render_template, request, redirect, url_for, jsonif
 from models import db
 from models.user import User
 from notifications import enviar_recordatorio
+from utils import login_required
 
 mail_bp = Blueprint('mail', __name__)
 
 @mail_bp.route("/notificaciones/recordatorio", methods=["POST"])
+@login_required
 def notificacion_recordatorio():
     try:
         data = request.get_json(force=True)

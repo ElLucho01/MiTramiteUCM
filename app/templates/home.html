@@ -10,7 +10,8 @@
     {% include 'navbar.html' %}
 
     <div class="main-content">
-        <button class="guide-btn">Guía de recomendaciones básicas</button>
+        <button class="guide-btn"
+        onclick="window.location.href='{{url_for('home.recomendaciones')}}'">Guía de recomendaciones básicas</button>
 
         <div class="benefits">
             {% for beneficio in beneficios %}

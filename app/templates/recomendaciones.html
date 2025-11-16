@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guía de recomendaciones básicas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='beneficio.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="benefit-container">
+        <h2 class="benefit-title">Guía de recomendaciones básicas</h2>
+
+        <div class="benefit-description">
+            <section class="guide-container" aria-labelledby="guide-title">
+  <div class="guide-header">
+    <h2 id="guide-title" class="guide-title">Guía de recomendaciones básicas</h2>
+    <p class="guide-intro">
+      ¡Hola! Sabemos que postular a beneficios puede ser estresante, pero con un poco de orden el proceso es mucho más fácil.
+      Esta guía te ayudará a prepararte y a evitar los problemas más comunes.
+    </p>
+  </div>
+
+  <ol class="guide-list">
+    <li class="guide-item">
+      <h3>¡Que no se te pasen las fechas!</h3>
+      <p>Esta es la regla de oro. Un solo día de retraso puede dejarte fuera del proceso. Revisa tu correo (incluido SPAM) y visita constantemente los sitios oficiales (Mineduc, FUAS, la universidad).</p>
+    </li>
+
+    <li class="guide-item">
+      <h3>Adelántate a los documentos</h3>
+      <p>Muchos documentos vencen (Registro Social de Hogares, certificados de residencia). Solicítalos con tiempo y guárdalos aunque la postulación aún no abra.</p>
+    </li>
+
+    <li class="guide-item">
+      <h3>Crea una <em>Carpeta Única</em></h3>
+      <p>Mantén en un solo lugar todos los documentos y comprobantes (en la nube o local). Así los tendrás listos cuando los pidan.</p>
+    </li>
+
+    <li class="guide-item">
+      <h3>Usa nombres claros en tus archivos</h3>
+      <p>Evita nombres genéricos. Usa nombres descriptivos que faciliten la revisión.</p>
+
+      <div class="examples">
+        <div class="example bad">
+          <strong>Mal nombre:</strong>
+          <pre>IMG-20251115.jpg</pre>
+        </div>
+
+        <div class="example good">
+          <strong>Buen nombre:</strong>
+          <pre>Certificado_Notas_Juan_Perez.pdf
+Carnet_Identidad_Maria_Gonzalez_Lado1.jpg</pre>
+        </div>
+      </div>
+    </li>
+
+    <li class="guide-item">
+      <h3>Guarda una copia de seguridad</h3>
+      <p>Sube tus documentos a la nube (Google Drive, OneDrive) o envíatelos por correo para no perderlos si tu equipo falla.</p>
+    </li>
+
+    <li class="guide-item">
+      <h3>Lee todo con calma</h3>
+      <p>Antes de preguntar, revisa las instrucciones al menos dos veces. Muchas respuestas ya están en los requisitos o correos oficiales.</p>
+    </li>
+  </ol>
+</section>
+    </div>
+            <div class="button-row">
+            <a href="{{ url_for('home.home') }}" class="btn volver">← Volver</a>
+        </div>
+</body>
+</html>
+
+<style>
+    .button-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+</style>

@@ -1,16 +1,26 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
 
 <div class="navbar">
-    <a class="logo" href="{{ url_for('home.home') }}">MiTrámite</a>
-
+    <!-- Logo, lleva a la página principal -->
+    <a class="logo" href="{{ url_for('home.home') }}">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="MiTrámite Logo" class="logo-img">
+    </a>
+    <!-- Búsqueda -->
     <div class="search-container">
-        <input type="text" placeholder="Buscar...">
+        <input type="text" placeholder="Buscar Beneficio..." id="busquedaBeneficios" autocomplete="off">
+            <div id="resultadosBusqueda" class="resultadosBusqueda"></div>
     </div>
 
+    <!-- Íconos -->
     <div class="icons">
         <button class="icon-btn perfil-icon" title="Perfil">👤</button>
         <button class="icon-btn" title="Notificaciones">🔔</button>
-        <button class="icon-btn" title="Trámites">📋</button>
+        <button class="icon-btn tracking-btn" title="Trámites">
+            📋
+            {% if g.beneficios_usuario and g.beneficios_usuario|length > 0 %}
+                <span class="badge">{{ g.beneficios_usuario|length }}</span>
+            {% endif %}
+        </button>
     </div>
 </div>
 
@@ -22,8 +32,26 @@
     <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
 </div>
 
-<!--Event listeners -->
+<!-- Menú desplegable de beneficios en seguimiento -->
+<div id="seguimiento-menu" class="seguimiento-menu">
+    <div class="seguimiento-header">
+        <strong>En seguimiento</strong>
+    </div>
 
+    {% if g.beneficios_usuario and g.beneficios_usuario|length > 0 %}
+        {% for b in g.beneficios_usuario %}
+            <a href="{{ url_for('home.beneficio_detail', beneficio_id=b.beneficios.id) }}" class="seguimiento-item">
+                {{ b.beneficios.nombre }}
+            </a>
+        {% endfor %}
+    {% else %}
+        <div class="seguimiento-item sin">
+            No tienes beneficios en seguimiento
+        </div>
+    {% endif %}
+</div>
+
+<!--Mostrar el menú desplegable del botón de perfil -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const perfilIcon = document.querySelector('.perfil-icon');
@@ -41,3 +69,113 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+
+<!-- Lógica de Buscador -->
+<script>
+const inputBusqueda = document.getElementById("busquedaBeneficios");
+const cajaResultados = document.getElementById("resultadosBusqueda");
+
+let indiceSeleccionado = -1; // Para navegación con teclas
+let resultadosActuales = []; // Últimos resultados recibidos
+
+// --- Función para renderizar resultados ---
+function renderResultados() {
+    if (resultadosActuales.length === 0) {
+        cajaResultados.innerHTML = "<div class='resultado-sin'>Sin resultados</div>";
+        cajaResultados.classList.add("show");
+        return;
+    }
+
+    cajaResultados.innerHTML = resultadosActuales
+        .map((b, i) => `
+            <div 
+                class="resultado-item ${i === indiceSeleccionado ? 'seleccionado' : ''}"
+                data-index="${i}"
+                onclick="window.location.href='/beneficio/${b.id}'"
+            >
+                <strong>${b.nombre}</strong><br>
+            </div>
+        `)
+        .join("");
+
+    cajaResultados.classList.add("show");
+}
+
+// --- Búsqueda dinámica por input ---
+inputBusqueda.addEventListener("input", function() {
+    const texto = this.value.trim();
+    indiceSeleccionado = -1;
+
+    if (texto.length === 0) {
+        cajaResultados.classList.remove("show");
+        cajaResultados.innerHTML = "";
+        return;
+    }
+
+    fetch(`/busqueda?q=${encodeURIComponent(texto)}`)
+        .then(res => res.json())
+        .then(data => {
+            resultadosActuales = data;
+            renderResultados();
+        })
+        .catch(err => console.error("Error:", err));
+});
+
+// --- Navegación con flechas ---
+inputBusqueda.addEventListener("keydown", function(e) {
+    if (!cajaResultados.classList.contains("show")) return;
+
+    // Flecha abajo
+    if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (indiceSeleccionado < resultadosActuales.length - 1) {
+            indiceSeleccionado++;
+            renderResultados();
+        }
+    }
+
+    // Flecha arriba
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (indiceSeleccionado > 0) {
+            indiceSeleccionado--;
+            renderResultados();
+        }
+    }
+
+    // Enter
+    if (e.key === "Enter") {
+        e.preventDefault();
+        if (indiceSeleccionado >= 0 && resultadosActuales[indiceSeleccionado]) {
+            const id = resultadosActuales[indiceSeleccionado].id;
+            window.location.href = `/beneficio/${id}`;
+        }
+    }
+});
+
+// --- Cerrar dropdown al hacer clic fuera ---
+document.addEventListener("click", function(e) {
+    if (!cajaResultados.contains(e.target) && e.target !== inputBusqueda) {
+        cajaResultados.classList.remove("show");
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const seguimientoBtn = document.querySelector('.icon-btn[title="Trámites"]');
+    const seguimientoMenu = document.getElementById('seguimiento-menu');
+
+    seguimientoBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        seguimientoMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!seguimientoMenu.contains(e.target) && e.target !== seguimientoBtn) {
+            seguimientoMenu.classList.remove('show');
+        }
+    });
+});
+</script>
+
