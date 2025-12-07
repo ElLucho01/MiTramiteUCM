@@ -1,5 +1,6 @@
 from flask import Flask, session, g
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
 from models import db  # Importa la instancia de SQLAlchemy desde models/__init__.py
 from models.user import User
 from models.benefit import Beneficios, Requerimientos
@@ -72,6 +73,28 @@ def create_app():
         print("🔧 Creando tablas si no existen...")
         db.create_all()
         print("✅ Tablas verificadas / creadas.")
+
+        sql = text("""
+            -- Beneficio 1
+            INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
+            VALUES ('Subsidio de Transporte Estudiantil', 'Descuento del 50% en transporte público.', 'Ministerio de Transporte', NOW())
+            ON CONFLICT DO NOTHING;
+
+            -- Beneficio 2
+            INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
+            VALUES ('Beca de Excelencia Académica', 'Apoyo económico a estudiantes con promedio superior a 6.0.', 'Universidad Central', NOW())
+            ON CONFLICT DO NOTHING;
+
+            -- Requerimientos
+            INSERT INTO requerimientos (descripcion, beneficio_id)
+            VALUES 
+                ('Acreditar condición de estudiante regular.', 1),
+                ('Tener promedio superior a 6.0 en el último semestre.', 2)
+            ON CONFLICT DO NOTHING;
+        """)
+
+        db.session.execute(sql)
+        db.session.commit()
 
     return app
 

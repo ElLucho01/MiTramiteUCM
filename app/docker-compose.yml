@@ -45,6 +45,17 @@ services:
     depends_on:
       - db
 
+  cypress:
+    build:
+      context: ./Cypress
+      dockerfile: Dockerfile
+    container_name: mitramite_cypress
+    depends_on:
+      - web
+    environment:
+      - CYPRESS_baseUrl=http://web:5000
+    volumes:
+      - ./Cypress:/e2e
 volumes:
   postgres_data:
   pgadmin_data:

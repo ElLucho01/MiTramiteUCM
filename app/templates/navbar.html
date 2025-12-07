@@ -15,6 +15,8 @@
     <div class="icons">
         <button class="icon-btn perfil-icon" title="Perfil">👤</button>
         <button class="icon-btn" title="Notificaciones">🔔</button>
+
+
         <button class="icon-btn tracking-btn" title="Trámites">
             📋
             {% if g.beneficios_usuario and g.beneficios_usuario|length > 0 %}
@@ -49,6 +51,10 @@
             No tienes beneficios en seguimiento
         </div>
     {% endif %}
+</div>
+<div id="lista-notificaciones" class="notificaciones-lista">
+    <div class="notificacion-item sin">Cargando...</div>
+    </div>
 </div>
 
 <!--Mostrar el menú desplegable del botón de perfil -->
@@ -160,7 +166,7 @@ document.addEventListener("click", function(e) {
     }
 });
 </script>
-
+<!--Mostrar el menú desplegable del botón de seguimiento-->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const seguimientoBtn = document.querySelector('.icon-btn[title="Trámites"]');
@@ -179,3 +185,44 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const notifBtn = document.querySelector('.icon-btn[title="Notificaciones"]');
+    const notifMenu = document.getElementById('notificaciones-menu');
+    const lista = document.getElementById("lista-notificaciones");
+
+    notifBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        notifMenu.classList.toggle('show');
+
+        if (notifMenu.classList.contains('show')) {
+            lista.innerHTML = `<div class="notificacion-item sin">Cargando...</div>`;
+
+            const res = await fetch("/api/notificaciones");
+            const data = await res.json();
+
+            if (!data.length) {
+                lista.innerHTML = `<div class="notificacion-item sin">No hay notificaciones</div>`;
+                return;
+            }
+
+            lista.innerHTML = data.map(n => `
+                <div class="notificacion-item ${n.leido ? 'leido' : 'no-leido'}">
+                    <strong>${n.titulo}</strong><br>
+                    <span>${n.mensaje}</span><br>
+                    <small class="fecha">${n.fecha}</small>
+                </div>
+            `).join("");
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!notifMenu.contains(e.target) && e.target !== notifBtn) {
+            notifMenu.classList.remove('show');
+        }
+    });
+
+});
+</script>
