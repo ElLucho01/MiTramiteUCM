@@ -8,3 +8,4 @@ Flask_migrate==4.0.4
 Flask-Mail==0.9.1
 Flask-APScheduler==1.12.4
 python-dotenv==1.0.1
+

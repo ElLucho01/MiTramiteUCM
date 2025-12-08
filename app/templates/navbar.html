@@ -14,24 +14,33 @@
     <!-- Íconos -->
     <div class="icons">
         <button class="icon-btn perfil-icon" title="Perfil">👤</button>
+        {% if session.get('nombre') %}
         <button class="icon-btn" title="Notificaciones">🔔</button>
-
-
         <button class="icon-btn tracking-btn" title="Trámites">
             📋
             {% if g.beneficios_usuario and g.beneficios_usuario|length > 0 %}
                 <span class="badge">{{ g.beneficios_usuario|length }}</span>
             {% endif %}
+        {% endif %}
         </button>
     </div>
 </div>
 
 <!-- Menú desplegable del perfil -->
+ 
 <div id="perfil-menu" class="perfil-menu">
+    {% if session.get('nombre') %}
     <div class="perfil-header">
         Bienvenido, <strong>{{ session.get('nombre', 'Usuario') }}</strong>
     </div>
     <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+    {% else %}
+    <div class="perfil-header">
+        ¡Hola, <strong>Invitado!</strong>
+    </div>
+    <a href="{{ url_for('auth.printScreen') }}">¡Create una Cuenta!</a>
+    {% endif %}
+ 
 </div>
 
 <!-- Menú desplegable de beneficios en seguimiento -->

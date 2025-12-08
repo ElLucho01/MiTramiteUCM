@@ -1,91 +1,179 @@
-.checklist-container {
-    width: 80%;
-    margin: auto;
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
+/* Variables de color */
+:root {
+    --color-border: #ccc;
+    --color-background-soft: #f9f9f9;
+    --color-green: #48bb78; /* Icono de "Ver más" */
+    --color-orange: #ed8936; /* Icono de "Ver menos" */
 }
 
-.beneficio-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
-    gap: 10px;
-}
-
-.beneficio-header h2 {
-    background: #e9eef4;
-    padding: 10px 40px;
-    border-radius: 6px;
+/* Estilos de la plantilla (simulación de base.css) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background-soft);
     margin: 0;
-}
-
-.config-icon {
-    background: #d9e8f7;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.tramites-list {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
 }
 
-.tramite-item {
-    background: white;
-    padding: 12px;
+.main-content {
+    width: 100%;
+    max-width: 750px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Navbar (Simulación de navbar.css) --- */
+#navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-weight: bold;
+    color: #333;
+    padding: 4px 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    padding: 2px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+
+/* --- Contenido Específico (Checklist) --- */
+
+/* Caja de Título (Beca Juan Gómez Millas) */
+.page-header-box {
+    margin: 10px auto 25px auto;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-border);
     border-radius: 6px;
-    border: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.tramite-row {
+.header-title {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+.settings-icon {
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #666;
+}
+
+
+/* Items del Trámite */
+.tramite-item {
+    margin-bottom: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: white;
+}
+
+.tramite-summary {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
-.tramite-nombre {
+.tramite-summary label {
     flex-grow: 1;
     margin-left: 10px;
-    font-size: 16px;
+    font-weight: 500;
 }
 
-.toggle-info-btn {
-    border: none;
-    background: none;
+.tramite-summary input[type="checkbox"] {
+    transform: scale(1.1);
+    accent-color: #333;
+}
+
+/* Texto e icono de Ver más/menos */
+.toggle-info {
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.toggle-info i {
+    font-size: 0.8em;
+}
+
+.green { color: var(--color-green); }
+.orange { color: var(--color-orange); }
+
+/* Detalles (contenido oculto/visible) */
+.tramite-details {
+    padding: 0 15px;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+.tramite-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.tramite-details.active {
+    max-height: 200px; /* Valor suficiente para mostrar el contenido */
+    padding: 10px 15px 15px 40px; /* Padding ajustado para alinear con el checkbox */
+    border-top: 1px solid var(--color-background-soft);
+}
+
+/* Botón Volver */
+.back-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 25px;
+    background-color: white;
+    color: #555;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 15px;
-    color: #2a72d4;
-    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.2s;
 }
 
-.toggle-info-btn .icon {
-    margin-left: 5px;
-}
-
-.tramite-info {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background: #eef2f6;
-    border-radius: 6px;
-}
-
-.volver-wrapper {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.volver-btn {
-    padding: 8px 18px;
-    background: white;
-    border: 1px solid #c9c9c9;
-    border-radius: 6px;
-    color: #c95c32;
-    font-weight: bold;
-    text-decoration: none;
+.back-button:hover {
+    background-color: var(--color-background-soft);
 }

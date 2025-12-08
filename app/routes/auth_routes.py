@@ -2,32 +2,42 @@ from flask import Blueprint, render_template, request, redirect, url_for, sessio
 from models import db
 from models.user import User
 from utils import login_required
+from flask import make_response
+
+
 
 auth_bp = Blueprint('auth', __name__)
 
 #Al abrir la pagina principal al no tener sesión iniciada
-@auth_bp.route('/')
-def index():
-    user = session.get('user_id')
-    if user:
-        return redirect(url_for('home.home'))
+@auth_bp.route('/register')
+def printScreen():
     return render_template('login.html')
 
  #En caso de pulsar el boton de registrar
 @auth_bp.route('/registrar', methods=['POST'])
 def registrar():
+    error = None
     #Se registran los datos del formulario de registro
     nombre = request.form.get('nombreReg')
     correo = request.form.get('correoReg')
+    correoB = request.form.get('correoRegB')
     contrasena = request.form.get('contrasenaReg')
+    contrasenaB = request.form.get('contrasenaRegB')
 
     #Se comprueba que el correo no esté ya registrado
     usuario = User.query.filter_by(correo=correo).first()
+    #Se comprueban los posibles errores de entrada
     if usuario:
-        #En caso de que el usuario ya esté registrado, se redirige a la página principal (agregar mensaje de error)
-        flash('El correo ya está registrado. Por favor, inicia sesión.', 'error')
+        error = 'El correo ya está registrado. Por favor, inicia sesión.'
+        flash(error, 'error')
+    elif correo != correoB:
+        error = 'Los correos no coinciden. Inténtalo de nuevo.'
+        flash(error, 'error')
+    elif contrasena != contrasenaB:
+        error = 'Las contraseñas no coinciden. Inténtalo de nuevo.'
+        flash(error, 'error')
+    if(error):
         return redirect(url_for('auth.index'))
-    #Se introduce al usuario a la db y se redirige a la página de inicio
     usuario = User(nombre=nombre, correo=correo)
     usuario.set_password(contrasena)
     #Se añade el usuario a la base de datos
@@ -57,8 +67,8 @@ def login():
 @auth_bp.route('/logout')
 @login_required
 def logout():
-    session.pop('user_id', None)
-    return redirect(url_for('auth.index'))
+    session.clear()
+    return redirect(url_for('home.home'))
 
 #Se cargan los datos del usuario en la sesión
 def log_user(usuario):

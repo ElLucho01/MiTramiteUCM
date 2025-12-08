@@ -1,8 +1,10 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify, session
 from models import db
 from models.user import User
 from notifications import enviar_recordatorio
 from utils import login_required
+from flask_mail import Message
+from app import mail
 
 mail_bp = Blueprint('mail', __name__)
 
@@ -35,3 +37,23 @@ def notificacion_recordatorio():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+def enviar_correo_seguimiento(destinatario, nombre_beca):
+    msg = Message(
+        subject='Nueva beca añadida a tu seguimiento',
+        sender='tu_correo@gmail.com',
+        recipients=[destinatario]
+    )
+
+    msg.body = f"""
+Hola,
+
+Has añadido la beca "{nombre_beca}" a tu lista de seguimiento.
+
+Te mantendremos informado si hay novedades o actualizaciones.
+
+Saludos,
+Equipo MiTramite
+"""
+    mail.send(msg)
+

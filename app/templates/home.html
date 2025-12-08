@@ -10,8 +10,14 @@
     {% include 'navbar.html' %}
 
     <div class="main-content">
+        <p style="text-align:center; font-size:15px; background:#f0f8ff; padding:12px; border-radius:6px; border-left:4px solid #32d0d6; width:90%; margin:auto; margin-bottom:20px;">
+        Si tienes dudas o no sabes por dónde empezar, te recomendamos leer nuestra guía de recomendaciones básicas en:
+        </p>
+
         <button class="guide-btn"
-        onclick="window.location.href='{{url_for('home.recomendaciones')}}'">Guía de recomendaciones básicas</button>
+        onclick="window.location.href='{{url_for('home.recomendaciones')}}'">Guía de recomendaciones básicas <span class="arrow">➜</span></button>
+        <div style="height:30px;"></div>
+        <h3>Beneficios más buscados:</h3>
 
         <div class="benefits">
             {% for beneficio in beneficios %}

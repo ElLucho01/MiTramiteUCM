@@ -134,3 +134,9 @@ label {
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
+.small-link {
+text-align: center;
+font-size: 12px;
+margin-top: 10px;
+}

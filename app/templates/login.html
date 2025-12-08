@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    {% include 'navbar.html' %}
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
         <div class="flash-messages">
@@ -29,8 +30,14 @@
                     <label for="correoReg">Correo</label>
                     <input type="email" name="correoReg" id="correoReg" placeholder="Correo" required>
 
+                    <label for="correoRegB">Ingrese nuevamente su Correo</label>
+                    <input type="email" name="correoRegB" id="correoRegB" placeholder="Correo" required>
+
                     <label for="contrasenaReg">Contraseña</label>
                     <input type="password" name="contrasenaReg" id="contrasenaReg" placeholder="Contraseña" required>
+
+                    <label for="contrasenaRegB">Contraseña</label>
+                    <input type="password" name="contrasenaRegB" id="contrasenaRegB" placeholder="Contraseña" required>
                     <button type="submit" id="registrarse">Registrarse</button>
                 </form>
             </div>
@@ -46,6 +53,7 @@
                     <label for="contrasenaLog">Contraseña</label>
                     <input type="password" id="contrasenaLog" name="contrasenaLog" placeholder="Contraseña" required>
                     <button type="submit" id="loginButton">Iniciar sesión</button>
+                    <p class="small-link">¿Olvidaste tu contraseña?</p>
                 </form>
             </div>
         </div>
