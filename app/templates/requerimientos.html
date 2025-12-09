@@ -15,9 +15,16 @@
     <div class="beneficio-header">
         <h2>{{ beneficio.nombre }}</h2>
 
+        {% if siguiendo %}
+
+        <form action="{{ url_for('seguimiento.eliminar_seguimiento', beneficio_id=beneficio.id) }}" method="GET">
+            <button type="submit" class="seguir-btn">+ Dejar de seguir Beneficio</button>
+        </form>
+        {% else %}
         <form action="{{ url_for('seguimiento.agregar_seguimiento', beneficio_id=beneficio.id) }}" method="GET">
             <button type="submit" class="seguir-btn">+ Seguir Beneficio</button>
         </form>
+        {% endif %}
     </div>
 
     <p>{{ beneficio.descripcion }}</p>

@@ -1,6 +1,7 @@
-from flask import Flask, session
+from flask import Flask, session, g
 from sqlalchemy import text
 from models import db  # Importa la instancia de SQLAlchemy desde models/__init__.py
+from models.benefit import Beneficios, Requerimientos
 from models.tracking import Beneficios_Estado
 from flask_mail import Mail
 from flask_apscheduler import APScheduler
@@ -24,9 +25,18 @@ def beneficios_usuario(user_id):
     )
     return beneficios
 
+def registrar_hooks(app):
+
+    @app.before_request
+    def cargar_beneficios_en_g():
+        user_id = session.get("user_id")
+        g.beneficios_usuario = beneficios_usuario(user_id)
+
+
 def create_app():
     app = Flask(__name__)
     app.register_blueprint(tracking_loader)
+    registrar_hooks(app)
     
     #Configuración de Flask-Mail
     load_dotenv("VariablesNotifications.env")

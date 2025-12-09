@@ -36,7 +36,8 @@ def requerimiento_detail(beneficio_id):
         "como": partes["como"],      # lista de pasos
         "donde": partes["donde"]
     })
-    return render_template('requerimientos.html', beneficio=beneficio, requerimientos=reqs)
+    siguiendo = Beneficios_Estado.query.filter_by(user_id=session.get('user_id'), benefit_id=beneficio_id).first() is not None
+    return render_template('requerimientos.html', beneficio=beneficio, requerimientos=reqs, siguiendo=siguiendo)
 
 
 #Se realiza la busqueda de beneficios con la barra superior
