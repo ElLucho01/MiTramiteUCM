@@ -2,9 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, sessio
 from models import db
 from models.user import User
 from utils import login_required
-from flask import make_response
-
-
+from .mail_routes import nuevaCuenta
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -45,6 +43,7 @@ def registrar():
     db.session.commit()
     #Se registra la información en la sesión
     log_user(usuario)
+    nuevaCuenta()
     return redirect(url_for('home.home'))
 
 #En caso de iniciar sesión

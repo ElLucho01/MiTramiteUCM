@@ -1,9 +1,6 @@
-from flask import Flask, session, g
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, session
 from sqlalchemy import text
 from models import db  # Importa la instancia de SQLAlchemy desde models/__init__.py
-from models.user import User
-from models.benefit import Beneficios, Requerimientos
 from models.tracking import Beneficios_Estado
 from flask_mail import Mail
 from flask_apscheduler import APScheduler
@@ -35,8 +32,8 @@ def create_app():
     load_dotenv("VariablesNotifications.env")
     app.config["MAIL_SERVER"] = os.getenv("MAIL_SERVER")
     app.config["MAIL_PORT"] = int(os.getenv("MAIL_PORT"))
-    app.config["MAIL_USE_TLS"] = os.getenv("MAIL_USE_TLS") == "true"
-    app.config["MAIL_USE_SSL"] = os.getenv("MAIL_USE_SSL") == "true"
+    app.config["MAIL_USE_TLS"] = os.getenv("MAIL_USE_TLS") == "True"
+    app.config["MAIL_USE_SSL"] = os.getenv("MAIL_USE_SSL") == "True"
     app.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
     app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
     app.config["MAIL_DEFAULT_SENDER"] = os.getenv("MAIL_DEFAULT_SENDER")
@@ -57,6 +54,12 @@ def create_app():
     # Inicializar la base de datos con Flask
     db.init_app(app)
 
+    @app.context_processor
+    def inject_beneficios_usuario():
+        user_id = session.get('user_id', None)
+        seguimientos = beneficios_usuario(user_id)
+        return dict(beneficios_usuario=seguimientos)
+
     # Registrar blueprints (rutas)
     from routes import register_routes
     register_routes(app)
@@ -67,27 +70,27 @@ def create_app():
         db.create_all()
         print("✅ Tablas verificadas / creadas.")
 
-        sql = text("""
-            -- Beneficio 1
-            INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
-            VALUES ('Subsidio de Transporte Estudiantil', 'Descuento del 50% en transporte público.', 'Ministerio de Transporte', NOW())
-            ON CONFLICT DO NOTHING;
+        #sql = text("""
+        #    -- Beneficio 1
+        #    INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
+        #    VALUES ('Subsidio de Transporte Estudiantil', 'Descuento del 50% en transporte público.', 'Ministerio de Transporte', NOW())
+        #    ON CONFLICT DO NOTHING;
 
-            -- Beneficio 2
-            INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
-            VALUES ('Beca de Excelencia Académica', 'Apoyo económico a estudiantes con promedio superior a 6.0.', 'Universidad Central', NOW())
-            ON CONFLICT DO NOTHING;
+        #    -- Beneficio 2
+        #    INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
+        #    VALUES ('Beca de Excelencia Académica', 'Apoyo económico a estudiantes con promedio superior a 6.0.', 'Universidad Central', NOW())
+        #    ON CONFLICT DO NOTHING;
 
-            -- Requerimientos
-            INSERT INTO requerimientos (descripcion, beneficio_id)
-            VALUES 
-                ('Acreditar condición de estudiante regular.', 1),
-                ('Tener promedio superior a 6.0 en el último semestre.', 2)
-            ON CONFLICT DO NOTHING;
-        """)
+        #    -- Requerimientos
+        #    INSERT INTO requerimientos (descripcion, beneficio_id)
+        #    VALUES 
+        #        ('Acreditar condición de estudiante regular.', 1),
+        #        ('Tener promedio superior a 6.0 en el último semestre.', 2)
+        #    ON CONFLICT DO NOTHING;
+        #""")
 
-        db.session.execute(sql)
-        db.session.commit()
+        #db.session.execute(sql)
+        #db.session.commit()
 
     return app
 

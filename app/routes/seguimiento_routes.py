@@ -18,7 +18,6 @@ def agregar_seguimiento(beneficio_id):
     nuevo_seguimiento = Beneficios_Estado(user_id=user_id, benefit_id=beneficio_id)
     db.session.add(nuevo_seguimiento)
     db.session.commit()
-    crear_notificacion_seguimiento(user_id, Beneficios.query.get(beneficio_id))
     
     return redirect(url_for('home.beneficio_detail', beneficio_id=beneficio_id))
 

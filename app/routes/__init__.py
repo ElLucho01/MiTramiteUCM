@@ -8,5 +8,4 @@ def register_routes(app):
     app.register_blueprint(home_bp)
     app.register_blueprint(mail_bp)
     app.register_blueprint(seguimiento_bp)
-
     

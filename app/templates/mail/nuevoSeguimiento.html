@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ titulo }}</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f8ff;
+      margin: 0;
+      padding: 0;
+      color: #2b2b2b;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #9ed1ff, #6eb6ff);
+      color: #003366;
+      padding: 20px 25px;
+    }
+
+    .body {
+      padding: 25px 30px;
+    }
+
+    .body h2 {
+      color: #004aad;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background-color: #eaf2ff;
+      border-left: 5px solid #004aad;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin: 20px 0;
+    }
+
+    .highlight p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    .timer {
+      text-align: center;
+      background-color: #004aad;
+      color: #fff;
+      border-radius: 6px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .progress-container {
+      background-color: #e2ecfa;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 25px 0 10px 0;
+    }
+
+    .progress-bar {
+      height: 20px;
+      background: linear-gradient(90deg, #004aad, #2c6bda);
+      width: {{ porcentaje }}%;
+      transition: width 0.4s ease;
+    }
+
+    .progress-text {
+      text-align: center;
+      font-size: 14px;
+      color: #004aad;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #004aad;
+      color: white !important;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #003b8a;
+    }
+
+    .footer {
+      background-color: #f0f4fb;
+      color: #555;
+      text-align: center;
+      padding: 18px;
+      font-size: 13px;
+      border-top: 1px solid #dce3f1;
+    }
+
+    .footer a {
+      color: #004aad;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1 style="margin:0;">MiTrámiteUCM</h1>
+      <p style="margin:0; font-size:14px;">Nuevo Beneficio añadido a Seguimiento</p>
+    </div>
+
+    <div class="body">
+
+      <p>Estimado/a <strong>{{ nombre }}</strong>,</p>
+
+      <p>
+        Has añadido un nuevo beneficio a tu seguimiento en <strong>MiTrámiteUCM</strong>.
+      </p>
+
+      <div class="highlight">
+        <p><strong>📅 Fecha límite de postulación:</strong> {{ fecha_limite }}</p>
+        <p><strong>🕒 Horario de cierre:</strong> {{ hora_cierre }}</p>
+        <p>
+          <strong>🔗 Postulación oficial:</strong>
+          <a href="{{ link_oficial }}" style="color:#004aad; text-decoration:none;">Portal oficial</a>
+        </p>
+      </div>
+
+
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+
+
+      <div class="cta">
+        <a href="{{ link_web }}" class="button">Ir a la página web</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Este mensaje fue enviado automáticamente por <strong>MiTrámiteUCM</strong>.</p>
+      <p>Universidad Católica del Maule © 2025 |
+        <a href="https://www.ucm.cl">www.ucm.cl</a>
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

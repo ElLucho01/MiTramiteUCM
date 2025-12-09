@@ -19,16 +19,12 @@
         <div class="button-row">
             <a href="{{ url_for('home.home') }}" class="btn volver">← Volver</a>
             {% if session.get('nombre') %}
-                {% if siguiendo %}
-                    <a onclick="window.location.href='{{ url_for('seguimiento.eliminar_seguimiento', beneficio_id=beneficio.id) }}'"
-                    class="btn conseguir seguimiento-activo">Eliminar de Seguimiento</a>
-                {% else %}
-                <a onclick="window.location.href='{{ url_for('seguimiento.agregar_seguimiento', beneficio_id=beneficio.id) }}'"
+
+                <a onclick="window.location.href='{{ url_for('home.requerimiento_detail', beneficio_id=beneficio.id) }}'"
                     class="btn conseguir">¿Como lo Consigo? →</a>
-                {% endif %}
             {% else %}
                     <a onclick="window.location.href='{{ url_for('auth.printScreen') }}'"
-                    class="btn conseguir">Añadir a Seguimiento</a>
+                    class="btn conseguir">¿Como lo Consigo? →</a>
                     </div>
             {% endif %}
     </div>

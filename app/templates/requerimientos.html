@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ beneficio.nombre }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='requerimientos.css') }}">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+<div class="beneficio-card">
+
+    <div class="beneficio-header">
+        <h2>{{ beneficio.nombre }}</h2>
+
+        <form action="{{ url_for('seguimiento.agregar_seguimiento', beneficio_id=beneficio.id) }}" method="GET">
+            <button type="submit" class="seguir-btn">+ Seguir Beneficio</button>
+        </form>
+    </div>
+
+    <p>{{ beneficio.descripcion }}</p>
+
+    <hr>
+
+    <h3>Trámites requeridos</h3>
+
+    {% for r in requerimientos %}
+    <div class="acordeon-item">
+
+        <div class="acordeon-header">
+            <div>
+                <input type="checkbox" class="checkbox">
+                <span>{{ r.nombre[:60] }}</span>
+            </div>
+            <button class="acordeon-toggle">+</button>
+        </div>
+
+        <div class="acordeon-body">
+
+            <div class="req-section">
+                <h4>Qué hacer</h4>
+                <p>{{ r.que }}</p>
+            </div>
+
+            <div class="req-section">
+                <h4>Cómo hacerlo</h4>
+                <ul>
+                    {% for paso in r.como %}
+                    <li>{{ paso }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="req-section">
+                <h4>Dónde hacerlo</h4>
+                <p>{{ r.donde }}</p>
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="volver-container">
+        <a href="{{ url_for('home.beneficio_detail', beneficio_id=beneficio.id) }}" class="volver-btn">
+            ← Volver a beneficios
+        </a>
+    </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.acordeon-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.acordeon-item');
+        item.classList.toggle('open');
+        btn.textContent = item.classList.contains('open') ? "-" : "+";
+    });
+});
+</script>
+
+</body>
+</html>

@@ -13,8 +13,6 @@ class Beneficios(db.Model):
     # tienen más sentido aquí que en una tabla separada.
     fuente = db.Column(db.String(100))
     fecha_actualizacion = db.Column(db.DateTime, default=datetime.utcnow)
-    
-    
     # --- Relaciones ---
     
     # 1-a-Muchos: Un beneficio tiene muchos requisitos
@@ -37,6 +35,7 @@ class Requerimientos(db.Model):
     __tablename__ = 'requerimientos'
     
     id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.Text, nullable=False)
     descripcion = db.Column(db.Text, nullable=False)
     
     # Clave foránea para la relación 1-a-Muchos
