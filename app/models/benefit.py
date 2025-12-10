@@ -14,15 +14,9 @@ class Beneficios(db.Model):
     fuente = db.Column(db.String(100))
     fecha_actualizacion = db.Column(db.DateTime, default=datetime.utcnow)
     # --- Relaciones ---
-    
-    # 1-a-Muchos: Un beneficio tiene muchos requisitos
-    requerimientos = db.relationship('Requerimientos', back_populates='beneficios', 
-                                   cascade="all, delete-orphan")
-    
+        
     # 1-a-Muchos: Un beneficio puede generar muchas notificaciones
     notificaciones = db.relationship('Notificaciones', back_populates='beneficios')
-    eventos = db.relationship('Evento_Beneficio', back_populates='beneficio', cascade='all, delete-orphan')
-
     
     # Muchos-a-Muchos: Un beneficio puede ser seguido por muchos usuarios
     seguidores = db.relationship('Beneficios_Estado', back_populates='beneficios', cascade='all, delete-orphan')
@@ -37,12 +31,9 @@ class Requerimientos(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.Text, nullable=False)
     descripcion = db.Column(db.Text, nullable=False)
-    
-    # Clave foránea para la relación 1-a-Muchos
-    beneficio_id = db.Column(db.Integer, db.ForeignKey('beneficios.id'), nullable=False)
-    
+    pasos = db.Column(db.Text, nullable=True)
+        
     # --- Relaciones ---
-    beneficios = db.relationship('Beneficios', back_populates='requerimientos')
     
     # Muchos-a-Muchos: Un requisito puede tener un estado para muchos usuarios
     user_statuses = db.relationship('Requerimientos_Estado', back_populates='requerimientos')

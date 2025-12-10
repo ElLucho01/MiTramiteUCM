@@ -272,3 +272,22 @@
     font-size: 11px;
     color: #666;
 }
+
+.notificacion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+}
+
+.btn-eliminar-notificacion {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+}
+
+.btn-eliminar-notificacion:hover {
+    color: red;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - Mi Tramite UCM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        <div class="form-container" style="justify-content: center;"> 
+            <div class="form-box login" style="width: 100%; max-width: 400px;">
+                <h2>Recuperar Contraseña</h2>
+                <p style="text-align: center; margin-bottom: 20px;">Ingresa tu correo y te enviaremos las instrucciones.</p>
+                
+                <form action="{{ url_for('auth.reset_request') }}" method="POST">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" name="email" id="email" placeholder="ejemplo@ucm.cl" required>
+                    
+                    <button type="submit">Enviar correo</button>
+                    
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="{{ url_for('auth.printScreen') }}" class="small-link">Volver al inicio de sesión</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

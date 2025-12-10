@@ -33,41 +33,67 @@
 
     <h3>Trámites requeridos</h3>
 
-    {% for r in requerimientos %}
-    <div class="acordeon-item">
+{% for r in requerimientos %}
+{% set partes = r.pasos.split('|') %}
 
-        <div class="acordeon-header">
-            <div>
-                <input type="checkbox" class="checkbox">
-                <span>{{ r.nombre[:60] }}</span>
-            </div>
-            <button class="acordeon-toggle">+</button>
+{% set que_hacer = partes[0]
+    |replace('Qué hacer:', '')
+    |replace('Qué hacer', '')
+    |trim
+%}
+
+{% set como_hacer_raw = partes[1]
+    |replace('Cómo hacerlo:', '')
+    |replace('Cómo hacerlo', '')
+    |trim
+%}
+
+{% set como_hacer = como_hacer_raw.split(';') %}
+
+{% set documentos = partes[2]
+    |replace('Documentos necesarios:', '')
+    |replace('Documentos necesarios', '')
+    |trim
+%}
+
+<div class="acordeon-item">
+
+    <div class="acordeon-header">
+        <div>
+            <input type="checkbox" class="checkbox">
+            <span>{{ r.descripcion }}</span>
         </div>
-
-        <div class="acordeon-body">
-
-            <div class="req-section">
-                <h4>Qué hacer</h4>
-                <p>{{ r.que }}</p>
-            </div>
-
-            <div class="req-section">
-                <h4>Cómo hacerlo</h4>
-                <ul>
-                    {% for paso in r.como %}
-                    <li>{{ paso }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <div class="req-section">
-                <h4>Dónde hacerlo</h4>
-                <p>{{ r.donde }}</p>
-            </div>
-
-        </div>
+        <button class="acordeon-toggle">+</button>
     </div>
-    {% endfor %}
+
+    <div class="acordeon-body">
+
+        <div class="req-section">
+            <h4>Qué hacer</h4>
+            <p>{{ que_hacer }}</p>
+        </div>
+
+        <div class="req-section">
+            <h4>Cómo hacerlo</h4>
+            <ul>
+                {% for paso in como_hacer %}
+                    {% if paso.strip() %}
+                    <li>{{ paso.strip() }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="req-section">
+            <h4>Documentos necesarios</h4>
+            <p>{{ documentos }}</p>
+        </div>
+
+    </div>
+</div>
+{% endfor %}
+
+
 
     <div class="volver-container">
         <a href="{{ url_for('home.beneficio_detail', beneficio_id=beneficio.id) }}" class="volver-btn">

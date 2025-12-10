@@ -53,7 +53,9 @@
                     <label for="contrasenaLog">Contraseña</label>
                     <input type="password" id="contrasenaLog" name="contrasenaLog" placeholder="Contraseña" required>
                     <button type="submit" id="loginButton">Iniciar sesión</button>
-                    <p class="small-link">¿Olvidaste tu contraseña?</p>
+                    <div style="text-align: center; margin-top: 10px;">
+                    <a href="{{ url_for('auth.reset_request') }}" class="small-link" style="text-decoration: none; color: inherit; font-size: 0.9em;">¿Olvidaste tu contraseña?</a>
+                    </div>
                 </form>
             </div>
         </div>

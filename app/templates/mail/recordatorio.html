@@ -127,7 +127,7 @@
 
     <div class="header">
       <h1 style="margin:0;">MiTrámiteUCM</h1>
-      <p style="margin:0; font-size:14px;">Guía y seguimiento de beneficios estudiantiles</p>
+      <p style="margin:0; font-size:14px;">¡Faltan 7 días!</p>
     </div>
 
     <div class="body">
@@ -136,27 +136,16 @@
       <p>Estimado/a <strong>{{ nombre }}</strong>,</p>
 
       <p>
-        Te recordamos que el beneficio 
-        <strong>{{ beneficio }}</strong>
-        mantiene su proceso de postulación abierto.  
-        Aquí puedes ver tu progreso del checklist:
+        Te recordamos que dentro de 7 días, se llevará a cabo el siguiente evento: 
+        <strong>{{ evento.nombre }}</strong>
       </p>
 
       <div class="highlight">
-        <p><strong>📅 Fecha límite de postulación:</strong> {{ fecha_limite }}</p>
-        <p><strong>🕒 Horario de cierre:</strong> {{ hora_cierre }}</p>
+        <p><strong>📅 Fecha del Evento:</strong> {{ fecha }}</p>
         <p>
           <strong>🔗 Postulación oficial:</strong>
           <a href="{{ link_oficial }}" style="color:#004aad; text-decoration:none;">Portal oficial</a>
         </p>
-      </div>
-
-      <div class="timer">
-        ⏳ Quedan <span style="color:#ffd700;">{{ horas_restantes }}</span> horas para el cierre del beneficio.
-      </div>
-
-      <div class="progress-text">
-        Tu progreso actual: {{ cumplidos }} de {{ total }} requisitos completados
       </div>
 
       <div class="progress-container">

@@ -25,19 +25,9 @@ def beneficio_detail(beneficio_id):
 @login_required
 def requerimiento_detail(beneficio_id):
     beneficio = Beneficios.query.get_or_404(beneficio_id)
-    requerimientos = Requerimientos.query.filter_by(beneficio_id=beneficio_id).all()
-    reqs = []
-    for r in requerimientos:
-        partes = parse_requerimiento(r.descripcion)
-        reqs.append({
-        "id": r.id,
-        "nombre": r.nombre,
-        "que": partes["que"],
-        "como": partes["como"],      # lista de pasos
-        "donde": partes["donde"]
-    })
+    requerimientos = Requerimientos.query.all()
     siguiendo = Beneficios_Estado.query.filter_by(user_id=session.get('user_id'), benefit_id=beneficio_id).first() is not None
-    return render_template('requerimientos.html', beneficio=beneficio, requerimientos=reqs, siguiendo=siguiendo)
+    return render_template('requerimientos.html', beneficio=beneficio, requerimientos=requerimientos, siguiendo=siguiendo)
 
 
 #Se realiza la busqueda de beneficios con la barra superior

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperación de contraseña - MiTrámiteUCM</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#f2f4f7; font-family: Arial, sans-serif;">
+
+    <!-- Contenedor principal -->
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+
+                <!-- Tarjeta -->
+                <table width="600" cellpadding="0" cellspacing="0" style="background:white; margin-top:30px; border-radius:10px; overflow:hidden;">
+
+                    <!-- Header azul -->
+                    <tr>
+                        <td style="background:#4a9fff; padding:25px; color:white; font-size:22px; font-weight:bold;">
+                            MiTrámiteUCM
+                            <div style="font-size:13px; font-weight:normal; margin-top:5px;">
+                                Guía y seguimiento de beneficios estudiantiles
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Cuerpo -->
+                    <tr>
+                        <td style="padding:30px; color:#333;">
+
+                            <!-- Título -->
+                            <h2 style="margin:0 0 15px 0; font-size:20px; color:#003c80;">
+                                🔐 Recuperación de contraseña
+                            </h2>
+
+                            <p style="font-size:14px; line-height:1.6;">
+                                Estimada/o Estudiante,
+                                <br><br>
+                                Hemos recibido una solicitud para restablecer tu contraseña de acceso a <b>MiTrámiteUCM</b>.
+                            </p>
+
+                            <!-- Bloque de datos -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f4ff; padding:15px; border-radius:8px;">
+                                <tr>
+                                    <td style="font-size:14px; color:#003c80;">
+                                        📝 <b>Solicitud realizada:</b> {{fecha_solicitud}}
+                                        <br>
+                                        🕒 <b>Válido hasta:</b> {{hora_limite}}
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br>
+
+                            <!-- Texto reemplazado -->
+                            <p style="font-size:14px; color:#003c80; font-weight:bold; text-align:center;">
+                                Haz clic en el botón <b>Restablecer contraseña</b> para crear una nueva contraseña.
+                            </p>
+
+                            <!-- Botón -->
+                            <div style="text-align:center; margin-top:15px;">
+                                <a href="{{enlace_recuperacion}}" 
+                                   style="display:inline-block; background:#0159d6; padding:12px 25px; color:white; font-size:15px; text-decoration:none; border-radius:6px;">
+                                   Restablecer contraseña
+                                </a>
+                            </div>
+
+                            <br>
+
+                            <p style="font-size:13px; color:#555; line-height:1.6;">
+                                Si tú no solicitaste este cambio, puedes ignorar este mensaje. 
+                                Tu cuenta seguirá siendo segura.
+                            </p>
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background:#f7f7f7; padding:20px; text-align:center; font-size:12px; color:#777;">
+                            Este mensaje fue enviado automáticamente por MiTrámiteUCM.
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

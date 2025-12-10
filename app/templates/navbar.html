@@ -15,7 +15,11 @@
     <div class="icons">
         <button class="icon-btn perfil-icon" title="Perfil">👤</button>
         {% if session.get('nombre') %}
-        <button class="icon-btn" title="Notificaciones">🔔</button>
+        <button class="icon-btn tracking-btn" title="Notificaciones">🔔
+            {% if g.notificaciones_usuario and g.notificaciones_usuario|length > 0 %}
+                <span class="badge">{{ g.notificaciones_usuario|length }}</span>
+            {% endif %}
+            </button>
         <button class="icon-btn tracking-btn" title="Trámites">
             📋
             {% if g.beneficios_usuario and g.beneficios_usuario|length > 0 %}
@@ -43,6 +47,31 @@
  
 </div>
 
+<!-- Menú desplegable de notificaciones -->
+<div id="notificaciones-menu" class="notificaciones-menu">
+    <div class="notificaciones-header">
+        <strong>Notificaciones</strong>
+    </div>
+
+    {% if g.notificaciones_usuario and g.notificaciones_usuario|length > 0 %}
+        {% for n in g.notificaciones_usuario %}
+            <div class="notificacion-item" data-id="{{ n.id }}">
+                <span class="mensaje">{{ n.mensaje }}</span>
+                
+                <!-- Botón X -->
+                <button class="btn-eliminar-notificacion" data-id="{{ n.id }}">
+                    ✖
+                </button>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="notificaciones-item sin">
+            No tienes notificaciones.
+        </div>
+    {% endif %}
+</div>
+
+
 <!-- Menú desplegable de beneficios en seguimiento -->
 <div id="seguimiento-menu" class="seguimiento-menu">
     <div class="seguimiento-header">
@@ -61,10 +90,7 @@
         </div>
     {% endif %}
 </div>
-<div id="lista-notificaciones" class="notificaciones-lista">
-    <div class="notificacion-item sin">Cargando...</div>
-    </div>
-</div>
+
 
 <!--Mostrar el menú desplegable del botón de perfil -->
 <script>
@@ -234,4 +260,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lista = document.getElementById("lista-notificaciones");
+    const badge = document.getElementById("badge-notificaciones");
+
+    function conectarBotones() {
+        document.querySelectorAll(".btn-eliminar-notificacion").forEach(btn => {
+            btn.onclick = async () => {
+                const id = btn.dataset.id;
+
+                const res = await fetch(`/notificaciones/eliminar/${id}`, {
+                    method: "DELETE"
+                });
+
+                const data = await res.json();
+                if (!data.success) return;
+
+                // 1. Eliminar visualmente
+                const item = document.querySelector(`.notificacion-item[data-id="${id}"]`);
+                if (item) item.remove();
+
+                // 2. Actualizar badge
+                badge.textContent = data.restantes;
+
+                // 3. Si no quedan notificaciones...
+                if (data.restantes === 0) {
+                    lista.innerHTML = `
+                        <div class="notificaciones-item sin">
+                            No tienes notificaciones.
+                        </div>
+                    `;
+                }
+            };
+        });
+    }
+
+    conectarBotones();
+});
+
 </script>

@@ -3,11 +3,12 @@ from sqlalchemy import text
 from models import db  # Importa la instancia de SQLAlchemy desde models/__init__.py
 from models.benefit import Beneficios, Requerimientos
 from models.tracking import Beneficios_Estado
+from models.notification import Notificaciones, UserNotificaciones
 from flask_mail import Mail
 from flask_apscheduler import APScheduler
 from dotenv import load_dotenv
 import os
-from utils import tracking_loader
+from utils import *
 
 mail = Mail()
 scheduler = APScheduler()
@@ -25,12 +26,25 @@ def beneficios_usuario(user_id):
     )
     return beneficios
 
+def notificaciones_usuario(user_id):
+    if not user_id:
+        return []
+
+    notificaciones = (
+        Notificaciones.query
+        .join(UserNotificaciones, UserNotificaciones.notificacion_id == Notificaciones.id)
+        .filter(UserNotificaciones.user_id == user_id)
+        .all()
+    )
+    return notificaciones
+
 def registrar_hooks(app):
 
     @app.before_request
     def cargar_beneficios_en_g():
         user_id = session.get("user_id")
         g.beneficios_usuario = beneficios_usuario(user_id)
+        g.notificaciones_usuario = notificaciones_usuario(user_id)
 
 
 def create_app():
@@ -50,6 +64,14 @@ def create_app():
 
     mail.init_app(app)
     scheduler.init_app(app)
+
+    scheduler.add_job(
+        id="job_eventos_proximos",
+        func=eventos_en_una_semana,
+        trigger="interval",
+        hours=24  # se ejecuta cada 24 horas
+    )
+
     scheduler.start()
 
 
@@ -76,31 +98,25 @@ def create_app():
 
     # Crear tablas dentro del contexto de la app
     with app.app_context():
+        from models.benefit_event import Evento_Beneficio
         print("🔧 Creando tablas si no existen...")
         db.create_all()
         print("✅ Tablas verificadas / creadas.")
-
-        #sql = text("""
-        #    -- Beneficio 1
-        #    INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
-        #    VALUES ('Subsidio de Transporte Estudiantil', 'Descuento del 50% en transporte público.', 'Ministerio de Transporte', NOW())
-        #    ON CONFLICT DO NOTHING;
-
-        #    -- Beneficio 2
-        #    INSERT INTO beneficios (nombre, descripcion, fuente, fecha_actualizacion)
-        #    VALUES ('Beca de Excelencia Académica', 'Apoyo económico a estudiantes con promedio superior a 6.0.', 'Universidad Central', NOW())
-        #    ON CONFLICT DO NOTHING;
-
-        #    -- Requerimientos
-        #    INSERT INTO requerimientos (descripcion, beneficio_id)
-        #    VALUES 
-        #        ('Acreditar condición de estudiante regular.', 1),
-        #        ('Tener promedio superior a 6.0 en el último semestre.', 2)
-        #    ON CONFLICT DO NOTHING;
-        #""")
-
-        #db.session.execute(sql)
-        #db.session.commit()
+        #Cargamos tablas de eventos si están vacías
+        if not db.session.query(Evento_Beneficio).first():
+            cargar_eventos_desde_json(
+                ruta_json="static/data/eventos.json",
+            )
+        #Cargamos tablas de beneficios si están vacías
+        if not db.session.query(Beneficios).first():
+            cargar_beneficios_desde_json(
+                ruta_json="static/data/beneficios.json",
+            )
+        #Cargamos tablas de requerimientos si están vacías
+        if not db.session.query(Requerimientos).first():
+            cargar_requerimientos_desde_json(
+                ruta_json="static/data/tramites.json",
+            )
 
     return app
 
