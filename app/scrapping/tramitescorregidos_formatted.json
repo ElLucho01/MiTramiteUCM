@@ -1,0 +1,314 @@
+[
+  {
+    "numero": "1",
+    "nombre": "Diferencias en la composición del grupo familiar.",
+    "documento": "Declaración jurada simple sobre la composición del hogar firmada por todos los integrantes del hogar mayores de edad.",
+    "pasos": "Qué hacer: Redactar un documento simple (manuscrito o computador) o descargar un formato tipo. | Cómo hacerlo: Enumerar a los integrantes del hogar, sus RUT y parentesco. Todos los mayores de edad deben firmar el documento. No requiere notario. | Documentos necesarios: Lápiz, papel y cédulas de identidad para verificar datos."
+  },
+  {
+    "numero": "1",
+    "nombre": "Diferencias en la composición del grupo familiar.",
+    "documento": "Cartola Hogar",
+    "pasos": "Qué hacer: Ingresar al sitio web del Registro Social de Hogares (www.registrosocial.gob.cl). | Cómo hacerlo: Hacer clic en 'Ir a mi registro', iniciar sesión y descargar la Cartola Hogar en formato PDF. | Documentos necesarios: ClaveÚnica y RUT."
+  },
+  {
+    "numero": "1",
+    "nombre": "Diferencias en la composición del grupo familiar.",
+    "documento": "Certificado de defunción, en caso de integrante del grupo familiar fallecido.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Registro Civil (www.registrocivil.cl) o acudir a una oficina. | Cómo hacerlo: Seleccionar 'Certificados en línea', buscar 'Defunción', ingresar el RUT del fallecido y descargar (es gratuito online). | Documentos necesarios: Conocer el RUT de la persona fallecida."
+  },
+  {
+    "numero": "1",
+    "nombre": "Diferencias en la composición del grupo familiar.",
+    "documento": "Certificado de nacimiento del recién nacido, en caso de nuevo integrante del grupo familiar.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Registro Civil (www.registrocivil.cl). | Cómo hacerlo: Seleccionar 'Certificados en línea', buscar 'Nacimiento', elegir 'Para todo trámite' e ingresar el RUT del recién nacido. | Documentos necesarios: Conocer el RUT del recién nacido."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses",
+    "pasos": "Qué hacer: Ingresar a la sucursal virtual (sitio web) de la AFP del afiliado. | Cómo hacerlo: Iniciar sesión, buscar la sección 'Certificados' y generar el de 'Cotizaciones obligatorias' seleccionando el periodo de los últimos 12 meses. | Documentos necesarios: RUT y Clave de acceso a la AFP."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Carpeta tributaria para solicitar crédito emitida por el SII",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online', seleccionar 'Situación Tributaria', luego 'Carpeta Tributaria Electrónica' y 'Generar carpeta para solicitar créditos'. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Últimas 6 liquidaciones del sueldo",
+    "pasos": "Qué hacer: Solicitar al empleador o descargar del portal del empleado si la empresa lo tiene. | Cómo hacerlo: Pedir al departamento de Recursos Humanos las copias firmadas o descargarlas digitalmente. | Documentos necesarios: Ninguno externo, solo acceso a los registros laborales."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Resolución judicial que determina pensión de alimentos y comprobante de pago actualizado, si corresponde.",
+    "pasos": "Qué hacer: Ingresar a la Oficina Judicial Virtual (ojv.pjud.cl) o revisar documentos personales. | Cómo hacerlo: Descargar la resolución en la sección 'Mis Causas' y adjuntar cartolas bancarias de transferencia o liquidaciones de pago. | Documentos necesarios: ClaveÚnica para el portal judicial."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses",
+    "pasos": "Qué hacer: Ingresar a la sucursal virtual (sitio web) de la AFP del afiliado. | Cómo hacerlo: Iniciar sesión, buscar la sección 'Certificados' y generar el de 'Cotizaciones obligatorias' seleccionando el periodo de los últimos 12 meses. | Documentos necesarios: RUT y Clave de acceso a la AFP."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Carpeta tributaria para solicitar crédito emitida por el SII",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online', seleccionar 'Situación Tributaria', luego 'Carpeta Tributaria Electrónica' y 'Generar carpeta para solicitar créditos'. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Resolución Judicial que determina la pensión de alimentos y comprobante de pago actualizado, si corresponde.",
+    "pasos": "Qué hacer: Ingresar a la Oficina Judicial Virtual (ojv.pjud.cl) o revisar documentos personales. | Cómo hacerlo: Descargar la resolución en la sección 'Mis Causas' y adjuntar cartolas bancarias de transferencia o liquidaciones de pago. | Documentos necesarios: ClaveÚnica para el portal judicial."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Documento que certifique ingresos mensuales. Debe presentar al menos uno de los siguientes: Informe resumen de Boletas de Honorarios emitida por SII., Formulario 29, Declaración mensual y pago simultáneo de impuestos (12 últimos formularios)., Formulario 22, Declaración de renta año 2025.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: En 'Servicios online', navegar a 'Boletas de Honorarios' (para resumen) o 'Impuestos Mensuales' (para F29) y descargar los archivos PDF correspondientes. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses",
+    "pasos": "Qué hacer: Ingresar a la sucursal virtual (sitio web) de la AFP del afiliado. | Cómo hacerlo: Iniciar sesión, buscar la sección 'Certificados' y generar el de 'Cotizaciones obligatorias' seleccionando el periodo de los últimos 12 meses. | Documentos necesarios: RUT y Clave de acceso a la AFP."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Carpeta tributaria para solicitar crédito emitida por el SII",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online', seleccionar 'Situación Tributaria', luego 'Carpeta Tributaria Electrónica' y 'Generar carpeta para solicitar créditos'. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Informe Social o Ficha Socioeconómica. Al pedir este documento se debe presentar una Solicitud de Informe Social.",
+    "pasos": "Qué hacer: Acudir a la Dirección de Desarrollo Comunitario (DIDECO) de su municipalidad o a la Asistente Social de su institución de educación. | Cómo hacerlo: Solicitar una hora para evaluación socioeconómica, presentar antecedentes y pedir la emisión del Informe Social. | Documentos necesarios: Cartola Hogar, comprobantes de ingresos, gastos y certificado de alumno regular."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Declaración de gastos mensuales. Debe presentarse junto con boletas que respalden los gastos efectuados.",
+    "pasos": "Qué hacer: Crear una planilla o lista detallada de gastos del hogar. | Cómo hacerlo: Listar ítems (arriendo, luz, agua, alimentación) con sus montos, sumar el total y adjuntar las boletas/facturas físicas o digitales correspondientes. | Documentos necesarios: Boletas de servicios básicos, contratos de arriendo y comprobantes de pago."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Resolución Judicial que determina la pensión de alimentos y comprobante de pago actualizado, si corresponde.",
+    "pasos": "Qué hacer: Ingresar a la Oficina Judicial Virtual (ojv.pjud.cl) o revisar documentos personales. | Cómo hacerlo: Descargar la resolución en la sección 'Mis Causas' y adjuntar cartolas bancarias de transferencia o liquidaciones de pago. | Documentos necesarios: ClaveÚnica para el portal judicial."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses",
+    "pasos": "Qué hacer: Ingresar a la sucursal virtual (sitio web) de la AFP del afiliado. | Cómo hacerlo: Iniciar sesión, buscar la sección 'Certificados' y generar el de 'Cotizaciones obligatorias' seleccionando el periodo de los últimos 12 meses. | Documentos necesarios: RUT y Clave de acceso a la AFP."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Carpeta tributaria para solicitar crédito emitida por el SII.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online', seleccionar 'Situación Tributaria', luego 'Carpeta Tributaria Electrónica' y 'Generar carpeta para solicitar créditos'. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Última liquidación de pagos de pensiones",
+    "pasos": "Qué hacer: Obtener comprobante de la entidad pagadora (IPS, AFP, Compañía de Seguros). | Cómo hacerlo: Descargar la liquidación desde el sitio web de la institución correspondiente o pedirla en sucursal presencial. | Documentos necesarios: RUT y clave web de la institución."
+  },
+  {
+    "numero": "2",
+    "nombre": "Diferencias en los ingresos del hogar.",
+    "documento": "Resolución Judicial que determina la pensión de alimentos y comprobante de pago actualizado, si corresponde.",
+    "pasos": "Qué hacer: Ingresar a la Oficina Judicial Virtual (ojv.pjud.cl) o revisar documentos personales. | Cómo hacerlo: Descargar la resolución en la sección 'Mis Causas' y adjuntar cartolas bancarias de transferencia o liquidaciones de pago. | Documentos necesarios: ClaveÚnica para el portal judicial."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Finiquito, Carta de desvinculación, o comprobante de pago del Seguro o Subsidio de Cesantía",
+    "pasos": "Qué hacer: Buscar el documento original entregado al término del contrato o ir a la AFC. | Cómo hacerlo: Escanear el finiquito legalizado. Para el seguro, entrar a www.afc.cl y descargar certificado de pagos. | Documentos necesarios: ClaveÚnica o Clave AFC."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses",
+    "pasos": "Qué hacer: Ingresar a la sucursal virtual (sitio web) de la AFP del afiliado. | Cómo hacerlo: Iniciar sesión, buscar la sección 'Certificados' y generar el de 'Cotizaciones obligatorias' seleccionando el periodo de los últimos 12 meses. | Documentos necesarios: RUT y Clave de acceso a la AFP."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Carpeta tributaria para solicitar crédito emitida por el SII.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online', seleccionar 'Situación Tributaria', luego 'Carpeta Tributaria Electrónica' y 'Generar carpeta para solicitar créditos'. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Últimas 6 liquidaciones de sueldo",
+    "pasos": "Qué hacer: Recopilar las liquidaciones anteriores al despido. | Cómo hacerlo: Buscar en archivos personales o solicitar copias al ex-empleador si no se tienen. | Documentos necesarios: Archivos PDF o físicos de las liquidaciones."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Certificado de término de giro comercial o industrial emitido por SII,",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online' -> 'Término de Giro' y descargar el certificado que acredita el cierre de la actividad. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses",
+    "pasos": "Qué hacer: Ingresar a la sucursal virtual (sitio web) de la AFP del afiliado. | Cómo hacerlo: Iniciar sesión, buscar la sección 'Certificados' y generar el de 'Cotizaciones obligatorias' seleccionando el periodo de los últimos 12 meses. | Documentos necesarios: RUT y Clave de acceso a la AFP."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Carpeta tributaria para solicitar crédito emitida por el SII.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Ir a 'Servicios online', seleccionar 'Situación Tributaria', luego 'Carpeta Tributaria Electrónica' y 'Generar carpeta para solicitar créditos'. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "3",
+    "nombre": "Cesantía de un integrante del grupo familiar.",
+    "documento": "Documento que certifique ingresos mensuales. Debe presentar al menos uno de los siguientes: Informe resumen de boleta de honorarios emitida por SII., Formulario 29, Declaración mensual y pago simultáneo de impuestos (12 últimos formularios)., Formulario 22 Declaración de Renta año 2025.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Servicio de Impuestos Internos (www.sii.cl). | Cómo hacerlo: Descargar 'Resumen de Boletas' o 'Consulta Integral F29' desde el menú de Servicios Online y guardar como PDF. | Documentos necesarios: Clave Tributaria o ClaveÚnica."
+  },
+  {
+    "numero": "4",
+    "nombre": "Gasto permanente en salud o enfermedad grave sobreviniente.",
+    "documento": "Certificado médico actualizado o epicrisis, firmado y timbrado por el médico tratante (año 2025-2026)",
+    "pasos": "Qué hacer: Acudir al centro de salud (CESFAM, Hospital, Clínica) donde se atiende el paciente. | Cómo hacerlo: Solicitar al médico tratante un certificado que detalle el diagnóstico y la condición de cronicidad o gravedad. | Documentos necesarios: Cédula de identidad del paciente."
+  },
+  {
+    "numero": "4",
+    "nombre": "Gasto permanente en salud o enfermedad grave sobreviniente.",
+    "documento": "Declaración de gastos médicos. Debe presentarse junto con boletas que respalden los gastos efectuados.",
+    "pasos": "Qué hacer: Elaborar un detalle de gastos y recopilar comprobantes. | Cómo hacerlo: Llenar formulario de gastos médicos (disponible en sitios de beneficios) y adjuntar bonos, boletas de farmacia y copagos. | Documentos necesarios: Recetas médicas y boletas/facturas originales."
+  },
+  {
+    "numero": "5",
+    "nombre": "Gasto en Educación Superior por otro integrante del grupo familiar sin beneficios.",
+    "documento": "Contrato de Prestación de Servicios Educacionales 2025 o documento emitido por la Institución de Educación Superior. Debe especificar claramente el monto de arancel para el año 2026, según corresponda.",
+    "pasos": "Qué hacer: Solicitarlo en la Institución de Educación Superior del hermano/familiar. | Cómo hacerlo: Descargar del portal de estudiantes de dicha institución o pedir en el departamento de Finanzas/Matrícula una constancia de arancel y contrato. | Documentos necesarios: RUT del estudiante familiar."
+  },
+  {
+    "numero": "6",
+    "nombre": "Integrante del hogar en condición de salud de larga duración.",
+    "documento": "Certificado del Registro Nacional de Discapacidad, emitido por el Registro Civil y/o copia de la credencial de discapacidad, emitida por el Registro Civil",
+    "pasos": "Qué hacer: Ingresar a www.registrocivil.cl o acudir presencialmente. | Cómo hacerlo: Buscar 'Certificado de Discapacidad' en certificados gratuitos o fotocopiar la credencial por ambos lados. | Documentos necesarios: ClaveÚnica o RUT del causante."
+  },
+  {
+    "numero": "7",
+    "nombre": "Ausencia o incompletitud de notas de Enseñanza Media. Diferencias en el NEM informado o Sin registro de haber cursado la Educación Media completa en Chile o No contar con Licencia de Enseñanza Media.",
+    "documento": "Certificados anuales de enseñanza media o concentraciones de notas",
+    "pasos": "Qué hacer: Ingresar al sitio 'Certificados en Línea' del Mineduc (certificados.mineduc.cl) o llamar al 600 600 2626. | Cómo hacerlo: Seleccionar 'Certificados de Estudio', ingresar RUT y descargar los documentos disponibles de cada año. | Documentos necesarios: RUT y fecha de nacimiento."
+  },
+  {
+    "numero": "7",
+    "nombre": "Ausencia o incompletitud de notas de Enseñanza Media. Diferencias en el NEM informado o Sin registro de haber cursado la Educación Media completa en Chile o No contar con Licencia de Enseñanza Media.",
+    "documento": "Licencia de Enseñanza Media o el Certificado de Licencia de Enseñanza Media emitido por Mineduc.",
+    "pasos": "Qué hacer: Ingresar al sitio 'Certificados en Línea' del Mineduc (certificados.mineduc.cl). | Cómo hacerlo: Seleccionar 'Licencia de Enseñanza Media', ingresar RUT y descargar. Si no está online, acudir a oficina de Ayuda Mineduc. | Documentos necesarios: RUT."
+  },
+  {
+    "numero": "8",
+    "nombre": "Haber declarado en FUAS 2025, o registrar en las bases de datos del Ministerio de Educación -en ambos casos por error- un título técnico de nivel superior, profesional o una licenciatura terminal.",
+    "documento": "Declaración jurada simple del apelante, referida a la no posesión de Título Profesional, Licenciatura Terminal o Título Técnico de Nivel Superior.",
+    "pasos": "Qué hacer: Redactar documento o descargar formato tipo del portal de beneficios. | Cómo hacerlo: Escribir declaración indicando que NO se posee título alguno, firmarla y adjuntarla. | Documentos necesarios: Cédula de identidad para firma."
+  },
+  {
+    "numero": "9",
+    "nombre": "Ser hijo de Profesional o Asistente de la Educación.",
+    "documento": "Copia de contrato vigente de la madre y/o padre, en un establecimiento educacional municipal, público, particular subvencionado o de administración delegada (año 2025 - 2026)",
+    "pasos": "Qué hacer: Solicitar al empleador del padre/madre (Colegio, DAEM o Servicio Local). | Cómo hacerlo: Pedir copia legalizada o firmada por el director/sostenedor que certifique vigencia y tipo de establecimiento. | Documentos necesarios: Ninguno externo."
+  },
+  {
+    "numero": "10",
+    "nombre": "Contar con residencia definitiva vigente o residencia temporal. (Causal válida solo para extranjeros que apelen a Gratuidad)",
+    "documento": "Se requiere validar la situación migratoria en el país mediante documentación oficial. En el caso de la residencia definitiva vigente, se debe presentar alguno de los siguientes documentos: el Certificado de Vigencia de Residencia Definitiva otorgado por la Policía de Investigaciones de Chile (PDI), con fecha posterior al periodo de inscripción FUAS, o la Resolución Exenta que otorga Residencia Definitiva en el país si fuese reciente, emitida por el Servicio Nacional de Migraciones.",
+    "pasos": "Qué hacer: Ingresar a trámites digitales del Servicio Nacional de Migraciones o PDI. | Cómo hacerlo: Solicitar 'Certificado de Vigencia de Permanencia Definitiva' online. | Documentos necesarios: ClaveÚnica."
+  },
+  {
+    "numero": "10",
+    "nombre": "Contar con residencia definitiva vigente o residencia temporal. (Causal válida solo para extranjeros que apelen a Gratuidad)",
+    "documento": "En el caso de la residencia temporal, se debe presentar uno de los siguientes documentos: solicitud o ampliación de solicitud de residencia definitiva o temporal en trámite, solicitud de Regularización Migratoria en trámite, certificado o ampliación de certificado de residencia definitiva o temporal en trámite, solicitud de Regularización Migratoria en trámite, Estampado Electrónico que certifica visación de Residencia, o Resolución Exenta que regulariza la permanencia en el país y otorga visación de residente temporario.",
+    "pasos": "Qué hacer: Ingresar al portal de trámites del Servicio Nacional de Migraciones. | Cómo hacerlo: Descargar el comprobante de solicitud en trámite o el estampado electrónico vigente. | Documentos necesarios: ClaveÚnica o credenciales de usuario de Migraciones."
+  },
+  {
+    "numero": "11",
+    "nombre": "Becas de Reparación Titular.",
+    "documento": "Fotocopia de cédula de identidad del postulante o el Titular (según corresponda) por ambos lados",
+    "pasos": "Qué hacer: Escanear o fotocopiar el carnet. | Cómo hacerlo: Asegurarse de que sea legible y estén ambos lados en el mismo documento o adjuntos. | Documentos necesarios: Cédula de identidad física."
+  },
+  {
+    "numero": "11",
+    "nombre": "Becas de Reparación Titular.",
+    "documento": "Fotocopia legalizada de la Licencia de Enseñanza Media, por ambos lados, o el Certificado de Licencia de Enseñanza Media emitido por Mineduc.",
+    "pasos": "Qué hacer: Ir a Notaría con la licencia original o descargar de Mineduc. | Cómo hacerlo: Si es fotocopia física, el notario debe estampar 'Fiel copia del original'. Si es digital con código de verificación, no requiere notario. | Documentos necesarios: Licencia original."
+  },
+  {
+    "numero": "11",
+    "nombre": "Becas de Reparación Titular.",
+    "documento": "Anexo 4: Formulario de aceptación del beneficio, legalizado ante notario.",
+    "pasos": "Qué hacer: Descargar formato del sitio de Beneficios Estudiantiles e ir a una Notaría. | Cómo hacerlo: Llenar el formulario y firmarlo presencialmente frente al notario. | Documentos necesarios: Documento impreso y Cédula de identidad."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Fotocopia de cédula de identidad del postulante o el Titular (según corresponda) por ambos lados.",
+    "pasos": "Qué hacer: Escanear o fotocopiar el carnet. | Cómo hacerlo: Asegurarse de que sea legible y estén ambos lados en el mismo documento. | Documentos necesarios: Cédula de identidad física."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Fotocopia legalizada de la Licencia de Enseñanza Media, por ambos lados, o el Certificado de Licencia de Enseñanza Media emitido por Mineduc.",
+    "pasos": "Qué hacer: Ir a Notaría con la licencia original o descargar de Mineduc. | Cómo hacerlo: Legalizar la fotocopia ante notario o usar el certificado digital con código validador. | Documentos necesarios: Licencia original."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Certificado de nacimiento (para asignación familiar o todo trámite) del postulante, si se trata del hijo del Titular. En caso de ser el nieto, también debe adjuntarse el certificado del padre o madre que es hijo o hija del Titular.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Registro Civil (www.registrocivil.cl). | Cómo hacerlo: Descargar certificado de nacimiento 'Para asignación familiar'. Repetir para el padre/madre si es nieto. | Documentos necesarios: RUT de las personas."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Titular vivo: Fotocopia de cédula de identidad del Titular, por ambos lados.",
+    "pasos": "Qué hacer: Solicitar el carnet al titular y fotocopiarlo. | Cómo hacerlo: Escanear o sacar foto legible por ambos lados. | Documentos necesarios: Cédula del titular."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Titular fallecido: Certificado de defunción del Titular emitido por el Servicio de Registro Civil e Identificación.",
+    "pasos": "Qué hacer: Ingresar al sitio web del Registro Civil (www.registrocivil.cl). | Cómo hacerlo: Descargar certificado de defunción 'Para todo trámite'. | Documentos necesarios: RUT del titular fallecido."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Certificado de posesión efectiva emitido por el Registro Civil, o por Tribunales, en aquellos casos más antiguos.",
+    "pasos": "Qué hacer: Ingresar a Registro Civil o solicitar copia en Archivo Judicial. | Cómo hacerlo: Si es reciente, descargar de www.registrocivil.cl. Si es antigua, pedir copia autorizada en tribunal o archivo. | Documentos necesarios: RUT del causante."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Anexo N°1: Formulario de traspaso con Titular vivo, legalizado ante notario.",
+    "pasos": "Qué hacer: Descargar anexo e ir a Notaría con el Titular. | Cómo hacerlo: Ambos deben firmar ante notario (o el titular autorizando). | Documentos necesarios: Formulario impreso y Cédulas de identidad."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Anexo N°2: Formulario de traspaso con Titular fallecido, con posesión efectiva, legalizado ante notario.",
+    "pasos": "Qué hacer: Descargar anexo e ir a Notaría. | Cómo hacerlo: Llenar con datos de posesión efectiva y firmar ante notario. | Documentos necesarios: Formulario impreso y certificado de posesión efectiva."
+  },
+  {
+    "numero": "12",
+    "nombre": "Becas de Reparación Traspaso.",
+    "documento": "Anexo N°3: Formulario de traspaso con Titular fallecido, sin posesión efectiva, legalizado ante notario.",
+    "pasos": "Qué hacer: Descargar anexo e ir a Notaría. | Cómo hacerlo: Completar formulario declarando situación y firmar ante notario. | Documentos necesarios: Formulario impreso y Cédula de identidad."
+  },
+  {
+    "numero": "13",
+    "nombre": "Ausencia de Título Técnico de nivel Superior o Egreso de Carrera Técnica en las bases del Ministerio de Educación, solo para beca de Articulación.",
+    "documento": "Declaración jurada simple del apelante, referida a la posesión de Título Técnico de Nivel Superior o registro de egreso carrera técnica. Documento descarblable de este sitio",
+    "pasos": "Qué hacer: Descargar el formato del sitio de postulación. | Cómo hacerlo: Llenar los datos confirmando la titulación o egreso previo, firmar (no requiere notario usualmente si es simple) y escanear. | Documentos necesarios: Documento descargado y lápiz."
+  }
+]

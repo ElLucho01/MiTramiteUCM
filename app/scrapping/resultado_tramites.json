@@ -1,0 +1,262 @@
+[
+    {
+        "numero": "1",
+        "nombre": "Diferencias en la composición del grupo familiar.",
+        "documento": "Declaración jurada simple sobre la composición del hogar firmada por todos los integrantes del hogar mayores de edad."
+    },
+    {
+        "numero": "1",
+        "nombre": "Diferencias en la composición del grupo familiar.",
+        "documento": "Cartola Hogar"
+    },
+    {
+        "numero": "1",
+        "nombre": "Diferencias en la composición del grupo familiar.",
+        "documento": "Certificado de defunción, en caso de integrante del grupo familiar fallecido."
+    },
+    {
+        "numero": "1",
+        "nombre": "Diferencias en la composición del grupo familiar.",
+        "documento": "Certificado de nacimiento del recién nacido, en caso de nuevo integrante del grupo familiar."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Carpeta tributaria para solicitar crédito emitida por el SII"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Últimas 6 liquidaciones del sueldo"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Resolución judicial que determina pensión de alimentos y comprobante de pago actualizado, si corresponde."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Carpeta tributaria para solicitar crédito emitida por el SII"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Resolución Judicial que determina la pensión de alimentos y comprobante de pago actualizado, si corresponde."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Documento que certifique ingresos mensuales. Debe presentar al menos uno de los siguientes: Informe resumen de Boletas de Honorarios emitida por SII., Formulario 29, Declaración mensual y pago simultáneo de impuestos (12 últimos formularios)., Formulario 22, Declaración de renta año 2025."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Carpeta tributaria para solicitar crédito emitida por el SII"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Informe Social o Ficha Socioeconómica. Al pedir este documento se debe presentar una Solicitud de Informe Social."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Declaración de gastos mensuales. Debe presentarse junto con boletas que respalden los gastos efectuados."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Resolución Judicial que determina la pensión de alimentos y comprobante de pago actualizado, si corresponde."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Carpeta tributaria para solicitar crédito emitida por el SII."
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Última liquidación de pagos de pensiones"
+    },
+    {
+        "numero": "2",
+        "nombre": "Diferencias en los ingresos del hogar.",
+        "documento": "Resolución Judicial que determina la pensión de alimentos y comprobante de pago actualizado, si corresponde."
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Finiquito, Carta de desvinculación, o comprobante de pago del Seguro o Subsidio de Cesantía"
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses"
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Carpeta tributaria para solicitar crédito emitida por el SII."
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Últimas 6 liquidaciones de sueldo"
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Certificado de término de giro comercial o industrial emitido por SII,"
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Certificado de cotizaciones de AFP de los últimos 12 meses"
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Carpeta tributaria para solicitar crédito emitida por el SII."
+    },
+    {
+        "numero": "3",
+        "nombre": "Cesantía de un integrante del grupo familiar.",
+        "documento": "Documento que certifique ingresos mensuales. Debe presentar al menos uno de los siguientes: Informe resumen de boleta de honorarios emitida por SII., Formulario 29, Declaración mensual y pago simultáneo de impuestos (12 últimos formularios)., Formulario 22 Declaración de Renta año 2025."
+    },
+    {
+        "numero": "4",
+        "nombre": "Gasto permanente en salud o enfermedad grave sobreviniente.",
+        "documento": "Certificado médico actualizado o epicrisis, firmado y timbrado por el médico tratante (año 2025-2026)"
+    },
+    {
+        "numero": "4",
+        "nombre": "Gasto permanente en salud o enfermedad grave sobreviniente.",
+        "documento": "Declaración de gastos médicos. Debe presentarse junto con boletas que respalden los gastos efectuados."
+    },
+    {
+        "numero": "5",
+        "nombre": "Gasto en Educación Superior por otro integrante del grupo familiar sin beneficios.",
+        "documento": "Contrato de Prestación de Servicios Educacionales 2025 o documento emitido por la Institución de Educación Superior. Debe especificar claramente el monto de arancel para el año 2026, según corresponda."
+    },
+    {
+        "numero": "6",
+        "nombre": "Integrante del hogar en condición de salud de larga duración.",
+        "documento": "Certificado del Registro Nacional de Discapacidad, emitido por el Registro Civil y/o copia de la credencial de discapacidad, emitida por el Registro Civil"
+    },
+    {
+        "numero": "7",
+        "nombre": "Ausencia o incompletitud de notas de Enseñanza Media. Diferencias en el NEM informado o Sin registro de haber cursado la Educación Media completa en Chile o No contar con Licencia de Enseñanza Media.",
+        "documento": "Certificados anuales de enseñanza media o concentraciones de notas"
+    },
+    {
+        "numero": "7",
+        "nombre": "Ausencia o incompletitud de notas de Enseñanza Media. Diferencias en el NEM informado o Sin registro de haber cursado la Educación Media completa en Chile o No contar con Licencia de Enseñanza Media.",
+        "documento": "Licencia de Enseñanza Media o el Certificado de Licencia de Enseñanza Media emitido por Mineduc."
+    },
+    {
+        "numero": "8",
+        "nombre": "Haber declarado en FUAS 2025, o registrar en las bases de datos del Ministerio de Educación -en ambos casos por error- un título técnico de nivel superior, profesional o una licenciatura terminal.",
+        "documento": "Declaración jurada simple del apelante, referida a la no posesión de Título Profesional, Licenciatura Terminal o Título Técnico de Nivel Superior."
+    },
+    {
+        "numero": "9",
+        "nombre": "Ser hijo de Profesional o Asistente de la Educación.",
+        "documento": "Copia de contrato vigente de la madre y/o padre, en un establecimiento educacional municipal, público, particular subvencionado o de administración delegada (año 2025 - 2026)"
+    },
+    {
+        "numero": "10",
+        "nombre": "Contar con residencia definitiva vigente o residencia temporal. (Causal válida solo para extranjeros que apelen a Gratuidad)",
+        "documento": "Se requiere validar la situación migratoria en el país mediante documentación oficial. En el caso de la residencia definitiva vigente, se debe presentar alguno de los siguientes documentos: el Certificado de Vigencia de Residencia Definitiva otorgado por la Policía de Investigaciones de Chile (PDI), con fecha posterior al periodo de inscripción FUAS, o la Resolución Exenta que otorga Residencia Definitiva en el país si fuese reciente, emitida por el Servicio Nacional de Migraciones."
+    },
+    {
+        "numero": "10",
+        "nombre": "Contar con residencia definitiva vigente o residencia temporal. (Causal válida solo para extranjeros que apelen a Gratuidad)",
+        "documento": "En el caso de la residencia temporal, se debe presentar uno de los siguientes documentos: solicitud o ampliación de solicitud de residencia definitiva o temporal en trámite, solicitud de Regularización Migratoria en trámite, certificado o ampliación de certificado de residencia definitiva o temporal en trámite, solicitud de Regularización Migratoria en trámite, Estampado Electrónico que certifica visación de Residencia, o Resolución Exenta que regulariza la permanencia en el país y otorga visación de residente temporario."
+    },
+    {
+        "numero": "11",
+        "nombre": "Becas de Reparación Titular.",
+        "documento": "Fotocopia de cédula de identidad del postulante o el Titular (según corresponda) por ambos lados"
+    },
+    {
+        "numero": "11",
+        "nombre": "Becas de Reparación Titular.",
+        "documento": "Fotocopia legalizada de la Licencia de Enseñanza Media, por ambos lados, o el Certificado de Licencia de Enseñanza Media emitido por Mineduc."
+    },
+    {
+        "numero": "11",
+        "nombre": "Becas de Reparación Titular.",
+        "documento": "Anexo 4: Formulario de aceptación del beneficio, legalizado ante notario."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Fotocopia de cédula de identidad del postulante o el Titular (según corresponda) por ambos lados."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Fotocopia legalizada de la Licencia de Enseñanza Media, por ambos lados, o el Certificado de Licencia de Enseñanza Media emitido por Mineduc."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Certificado de nacimiento (para asignación familiar o todo trámite) del postulante, si se trata del hijo del Titular. En caso de ser el nieto, también debe adjuntarse el certificado del padre o madre que es hijo o hija del Titular."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Titular vivo: Fotocopia de cédula de identidad del Titular, por ambos lados."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Titular fallecido: Certificado de defunción del Titular emitido por el Servicio de Registro Civil e Identificación."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Certificado de posesión efectiva emitido por el Registro Civil, o por Tribunales, en aquellos casos más antiguos."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Anexo N°1: Formulario de traspaso con Titular vivo, legalizado ante notario."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Anexo N°2: Formulario de traspaso con Titular fallecido, con posesión efectiva, legalizado ante notario."
+    },
+    {
+        "numero": "12",
+        "nombre": "Becas de Reparación Traspaso.",
+        "documento": "Anexo N°3: Formulario de traspaso con Titular fallecido, sin posesión efectiva, legalizado ante notario."
+    },
+    {
+        "numero": "13",
+        "nombre": "Ausencia de Título Técnico de nivel Superior o Egreso de Carrera Técnica en las bases del Ministerio de Educación, solo para beca de Articulación.",
+        "documento": "Declaración jurada simple del apelante, referida a la posesión de Título Técnico de Nivel Superior o registro de egreso carrera técnica. Documento descarblable de este sitio"
+    }
+]

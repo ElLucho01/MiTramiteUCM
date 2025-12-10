@@ -1,0 +1,161 @@
+{
+    "institucion": "Universidad Católica del Maule",
+    "documento_origen": "Reglamento de Ayudas Estudiantiles: Becas y Créditos",
+    "beneficios_detectados": [
+        {
+            "nombre": "Becas MINEDUC",
+            "descripcion": "Pago parcial del arancel con fondos del Ministerio de Educación. La Universidad participa en la validación, seguimiento y control.",
+            "requisitos": [
+                "Estudiante regular de pregrado",
+                "Cumplir criterios establecidos por el Ministerio de Educación"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Beca de Matrícula UCM",
+            "descripcion": "Liberación del 100% del valor de la matrícula durante el primer año para estudiantes con puntaje igual o superior a 820 en promedio de matemáticas y lenguaje. Liberación del 50% para puntajes iguales o superiores a 780.",
+            "requisitos": [
+                "Estudiante regular de pregrado",
+                "Puntaje en prueba de ingreso (promedio matemática y lenguaje) >= 820 (100% matrícula) o >= 780 (50% matrícula)"
+            ],
+            "fechas_clave": "Primer año"
+        },
+        {
+            "nombre": "Beca UCM de Arancel por Puntaje Nacional y Regional",
+            "descripcion": "Complemento a beca del Ministerio de Educación por puntaje máximo nacional o regional en pruebas de selección. Consiste en liberación total del arancel anual durante el año de ingreso. Se puede mantener si se está dentro de los tres primeros promedios de notas de la promoción.",
+            "requisitos": [
+                "Estudiante regular de pregrado",
+                "Haber obtenido puntaje máximo nacional o regional en pruebas de selección universitaria",
+                "Aparecer en listado DEMRE",
+                "Mantenerse dentro de los tres primeros promedios de notas de su promoción (para continuidad)"
+            ],
+            "fechas_clave": "Año de ingreso"
+        },
+        {
+            "nombre": "Beca de Honor por Admisión",
+            "descripcion": "Asignada por única vez durante el primer año de carrera al estudiante que ingresa en el primer lugar de su promoción. Consiste en $1.000.000 de libre disposición, divididos en 10 cuotas iguales.",
+            "requisitos": [
+                "Ingresar en el primer lugar a la promoción"
+            ],
+            "fechas_clave": "Primer año"
+        },
+        {
+            "nombre": "Beca de Honor por Excelencia Académica",
+            "descripcion": "Incentivo que consiste en la entrega de un equipo computacional o equivalente al tercer año de carrera.",
+            "requisitos": [
+                "Estudiante al día en asignaturas",
+                "Puntaje promedio acumulado sobresaliente (dentro del 25% más destacado de su promoción)"
+            ],
+            "fechas_clave": "Tercer año de carrera"
+        },
+        {
+            "nombre": "Beca Funcionario",
+            "descripcion": "Exención parcial del pago del arancel para trabajadores de la Universidad en carreras de pregrado. Se extiende a cónyuge, conviviente civil e hijos. El porcentaje de rebaja se determina anualmente por Decreto de Rectoría.",
+            "requisitos": [
+                "Ser trabajador de la Universidad (o cónyuge, conviviente civil, hijos)"
+            ],
+            "fechas_clave": "Anual (porcentaje de rebaja)"
+        },
+        {
+            "nombre": "Beca con Prestación Laboral",
+            "descripcion": "Pago semestral valorizado en contraprestación a labores desarrolladas en la Universidad. Orientada a estudiantes con problemas económicos. No podrá superar las 8 horas de trabajo semanal. Regulada por reglamento específico.",
+            "requisitos": [
+                "Presentar problemas económicos",
+                "Desarrollar labores en la Universidad (hasta 8 horas semanales)"
+            ],
+            "fechas_clave": "Semestral"
+        },
+        {
+            "nombre": "Beca al Mérito Deportivo",
+            "descripcion": "Beca parcial de arancel para estudiantes que ingresaron vía admisión especial como deportistas y se destacan en disciplinas deportivas de la Universidad. Regulada por reglamento específico.",
+            "requisitos": [
+                "Ingreso vía admisión especial como deportista",
+                "Destacarse en disciplinas deportivas"
+            ],
+            "fechas_clave": "A partir del tercer semestre"
+        },
+        {
+            "nombre": "Beca Gran Canciller",
+            "descripcion": "Entrega de apoyo en el 100% de arancel para estudiantes que ingresan a primer año (vía regular o admisión especial - estudiante trabajador). Destinada a un estudiante migrante residente en Chile sin residencia definitiva o que no cursó 4 años de media en el país. Regulada para su mantenimiento.",
+            "requisitos": [
+                "Ingreso a primer año (regular o admisión especial - estudiante trabajador)",
+                "Ser estudiante migrante residente en Chile",
+                "No poseer residencia definitiva en Chile o no haber cursado 4 años de enseñanza media en el país",
+                "Aprobar el 60% de las actividades curriculares inscritas durante el primer año",
+                "Aprobar el 70% de las actividades curriculares inscritas desde segundo año en adelante"
+            ],
+            "fechas_clave": "Cada dos años (entrega); Duración formal de la carrera (mantenimiento)"
+        },
+        {
+            "nombre": "Beneficio de Continuidad de Estudios",
+            "descripcion": "Beca de arancel y eventualmente para manutención para dar continuidad de estudios a estudiantes cuyo sostenedor económico fallece. Regulado por reglamento específico.",
+            "requisitos": [
+                "Fallecimiento del sostenedor económico durante el transcurso de los estudios"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Beneficio de Arancel Diferenciado",
+            "descripcion": "Exención de hasta el 50% del arancel semestral en razón de una disminución del número de créditos inscritos. Regulado por reglamento específico.",
+            "requisitos": [
+                "Disminución del número de créditos inscritos en el semestre"
+            ],
+            "fechas_clave": "Semestral"
+        },
+        {
+            "nombre": "Beneficio de Alimentación",
+            "descripcion": "Beneficio económico que bonifica la alimentación de estudiantes regulares de pregrado con situación socioeconómica deficiente. Regulado por reglamento específico.",
+            "requisitos": [
+                "Estudiante regular de pregrado",
+                "Situación socioeconómica deficiente"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Crédito Universitario",
+            "descripcion": "Financiamiento del Ministerio de Educación para el pago del arancel anual, con cargo al Fondo Solidario de Crédito Universitario (FSCU). Regulado por ley 18.591 y modificaciones.",
+            "requisitos": [
+                "Cumplir requisitos para obtenerlo (según ley 18.591)"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Crédito con Aval del Estado (CAE)",
+            "descripcion": "Préstamo en dinero otorgado por el Ministerio de Educación, avalado por la Universidad, para pago de arancel. Regulado por ley 20.027 y modificaciones.",
+            "requisitos": [
+                "Cumplir requisitos para obtenerlo (según ley 20.027)"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Crédito Institucional",
+            "descripcion": "Préstamo de la Universidad para el pago del arancel anual, según disponibilidades presupuestarias, para estudiantes regulares que carecen de recursos y no pueden postular a otras fuentes. Regulado por normas específicas de la Universidad.",
+            "requisitos": [
+                "Estudiante regular",
+                "Carecer de recursos necesarios para financiar aranceles",
+                "No poder postular a otras fuentes de financiamiento",
+                "Cumplir requisitos, garantías y plazos específicos de la Universidad"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Crédito Suplementario",
+            "descripcion": "Otorgado por la Universidad a estudiantes de quintiles 1, II y III de ingresos para cubrir la diferencia entre el crédito/beca del Ministerio y el arancel real. Regulado por reglamento respectivo.",
+            "requisitos": [
+                "Pertenecer a los quintiles 1, II o III de ingresos"
+            ],
+            "fechas_clave": "N/A"
+        },
+        {
+            "nombre": "Préstamo Extraordinario",
+            "descripcion": "Suma de dinero que la Universidad puede otorgar a estudiantes regulares de pregrado para cubrir imprevistos o emergencias académicas. No se concede para pagar deudas con la Universidad. La devolución se pacta con el Director/a General Estudiantil. Pueden solicitarse en cualquier momento del período académico.",
+            "requisitos": [
+                "Estudiante regular de pregrado",
+                "Situación imprevista o de emergencia que incide en quehacer académico",
+                "No estar en condiciones de solventar el imprevisto"
+            ],
+            "fechas_clave": "Cualquier momento durante el período académico"
+        }
+    ],
+    "observaciones": "El documento es el reglamento de ayudas estudiantiles (becas y créditos) de la Universidad Católica del Maule, promulgado por Decreto de Rectoría N° 141/2022 de 13 de julio de 2022. Detalla diversos tipos de becas y créditos, sus descripciones, requisitos generales y específicos, y mecanismos de postulación y pérdida. Incluye información sobre becas del MINEDUC, propias de la UCM (matrícula, arancel, puntaje, honor, funcionario, laboral, deportivo, gran canciller, continuidad, arancel diferenciado, alimentación) y créditos (Universitario, CAE, Institucional, Suplementario, Extraordinario). Se mencionan fechas de postulación y obtención implícitas en calendarios académicos."
+}

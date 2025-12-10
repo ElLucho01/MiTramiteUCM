@@ -1,0 +1,152 @@
+{
+    "institucion": "Universidad Católica del Maule",
+    "documento_origen": "Reglamento de Ayudas Estudiantiles: Becas y Créditos",
+    "beneficios_detectados": [
+        {
+            "nombre": "Becas y Créditos de la Universidad Católica del Maule",
+            "requisitos": [
+                "Ser estudiante regular de pregrado.",
+                "Cumplir con los criterios establecidos para cada beneficio específico.",
+                "Acreditar situación socioeconómica deficiente (para la mayoría de los beneficios).",
+                "Ingresar a la Universidad por vía de admisión ordinaria, salvo excepciones.",
+                "Presentar documentación requerida dentro de los plazos."
+            ],
+            "fechas_clave": "Dictación del Decreto de Rectoría: 13 de julio de 2022. El otorgamiento de beneficios se realiza en fechas establecidas en el Calendario Anual de Actividades Académicas y Estudiantiles."
+        },
+        {
+            "nombre": "BECAS MINEDUC",
+            "requisitos": [
+                "Ser estudiante regular de pregrado.",
+                "Cumplir los criterios establecidos por el Ministerio de Educación."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "BECA DE MATRÍCULA UCM",
+            "requisitos": [
+                "Puntaje igual o superior a 820 puntos (promedio matemática y lenguaje) para liberación del 100% de la matrícula el primer año.",
+                "Puntaje promedio de las pruebas de matemática y lenguaje igual o superior a 780 puntos (o equivalente) para liberación del 50% de la matrícula el primer año."
+            ],
+            "fechas_clave": "Primer año de estudios."
+        },
+        {
+            "nombre": "BECA UCM DE ARANCEL POR PUNTAJE NACIONAL Y REGIONAL",
+            "requisitos": [
+                "Haber obtenido puntaje máximo nacional o regional en las pruebas de selección universitaria.",
+                "Mantenerse dentro de los tres primeros promedios de notas de su promoción para continuar la beca."
+            ],
+            "fechas_clave": "Año de ingreso a la Universidad. Continuación durante la carrera."
+        },
+        {
+            "nombre": "BECA DE HONOR POR ADMISIÓN",
+            "requisitos": [
+                "Ingresar en el primer lugar a su promoción."
+            ],
+            "fechas_clave": "Primer año de carrera (por única vez)."
+        },
+        {
+            "nombre": "BECA DE HONOR POR EXCELENCIA ACADEMICA",
+            "requisitos": [
+                "Encontrarse al día en sus asignaturas.",
+                "Tener un puntaje promedio acumulado dentro del 25% más destacado de su promoción."
+            ],
+            "fechas_clave": "Tercer año de carrera."
+        },
+        {
+            "nombre": "BECA FUNCIONARIO",
+            "requisitos": [
+                "Ser trabajador de la Universidad.",
+                "Beneficio extensivo a cónyuge, conviviente civil e hijos."
+            ],
+            "fechas_clave": "Porcentaje de rebaja determinado anualmente por Decreto de Rectoría."
+        },
+        {
+            "nombre": "BECA CON PRESTACIÓN LABORAL",
+            "requisitos": [
+                "Presentar problemas económicos.",
+                "Desarrollar labores en distintas dependencias de la Universidad (no superar 8 horas semanales)."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "BECA AL MÉRITO DEPORTIVO",
+            "requisitos": [
+                "Ingresar vía admisión especial como deportista.",
+                "Destacarse en disciplinas deportivas cultivadas por la Universidad."
+            ],
+            "fechas_clave": "A partir del tercer semestre."
+        },
+        {
+            "nombre": "BECA GRAN CANCILLER",
+            "requisitos": [
+                "Ser estudiante migrante residiendo actualmente en Chile.",
+                "No poseer residencia definitiva en Chile o no haber cursado 4 años de enseñanza media en el país.",
+                "Aprobar el 60% de las actividades curriculares inscritas durante el primer año.",
+                "Aprobar el 70% de las actividades curriculares inscritas desde segundo año en adelante."
+            ],
+            "fechas_clave": "Cada dos años. Otorgada por la duración formal de la carrera."
+        },
+        {
+            "nombre": "BENEFICIO DE CONTINUIDAD DE ESTUDIOS",
+            "requisitos": [
+                "Fallecimiento del sostenedor económico durante el transcurso de los estudios."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "BENEFICIO DE ARANCEL DIFERENCIADO",
+            "requisitos": [
+                "Disminución del número de créditos inscritos por el alumno en un semestre."
+            ],
+            "fechas_clave": "Por semestre."
+        },
+        {
+            "nombre": "BENEFICIO DE ALIMENTACIÓN",
+            "requisitos": [
+                "Ser estudiante regular de pregrado.",
+                "Presentar situación socioeconómica deficiente."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "CRÉDITO UNIVERSITARIO",
+            "requisitos": [
+                "Cumplir los requisitos para obtenerlo (según Ley 18.591)."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "CRÉDITO CON AVAL DEL ESTADO",
+            "requisitos": [
+                "Cumplir los requisitos para obtenerlo (según Ley 20.027)."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "CRÉDITO INSTITUCIONAL",
+            "requisitos": [
+                "Carecer de los recursos necesarios para financiar parcial o totalmente el costo de sus aranceles.",
+                "No poder postular a otras fuentes de financiamiento."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "CRÉDITO SUPLEMENTARIO",
+            "requisitos": [
+                "Pertenecer a los quintiles I, II y III de ingresos.",
+                "Cubrir la diferencia entre el crédito/beca asignado por el Ministerio de Educación y el arancel real de la carrera."
+            ],
+            "fechas_clave": null
+        },
+        {
+            "nombre": "PRÉSTAMO EXTRAORDINARIO",
+            "requisitos": [
+                "Ser estudiante regular de pregrado.",
+                "Enfrentar imprevistos o situaciones de emergencia que inciden en el quehacer académico.",
+                "No estar en condiciones de solventar dichos imprevistos."
+            ],
+            "fechas_clave": "Pueden ser solicitados en cualquier momento durante el período académico."
+        }
+    ],
+    "observaciones": "El documento detalla el Reglamento de Ayudas Estudiantiles de la Universidad Católica del Maule, promulgando normas generales, becas y créditos. Se especifican diversos tipos de becas (académicas, deportivas, por puntaje, para funcionarios, etc.) y créditos (ministeriales, institucionales). Se describen requisitos generales y específicos, así como causales de pérdida de beneficios. El documento fue promulgado el 13 de julio de 2022."
+}
